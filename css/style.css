@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'Open-Sans';
+  src: url("../fonts/OpenSans-Light.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open-Sans';
+  src: url("../fonts/OpenSans-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open-Sans';
+  src: url("../fonts/OpenSans-SemiBold.woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open-Sans';
+  src: url("../fonts/OpenSans-Bold.woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open-Sans';
+  src: url("../fonts/OpenSans-ExtraBold.woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+/* Header Block */
+
+.header-top {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+.header-top__logo-lnk {
+  margin-right: 179px;
+}
+
+.header-top__nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+}
+
+.header-top__nav-item, .header-top__btn {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.header-top__nav-item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.header-bottom {
+  min-height: 70px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.banner__slides {
+  width: 100vw;
+  min-height: 800px;
+}
+.banner__slide1 {
+  background-image: url('../images/banner-slide1.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.banner__slide2 {
+  background-image: url('../images/banner-slide2.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.banner__slide3 {
+  background-image: url('../images/banner-slide3.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
