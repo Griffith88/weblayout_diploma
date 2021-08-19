@@ -1,39 +1,42 @@
 @font-face {
   font-family: 'Open-Sans';
-  src: url("../fonts/OpenSans-Light.woff2");
+  src: url("../fonts/OpenSans-Light.woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open-Sans';
-  src: url("../fonts/OpenSans-Regular.woff2");
+  src: url("../fonts/OpenSans-Regular.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open-Sans';
-  src: url("../fonts/OpenSans-SemiBold.woff2");
+  src: url("../fonts/OpenSans-SemiBold.woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open-Sans';
-  src: url("../fonts/OpenSans-Bold.woff2");
+  src: url("../fonts/OpenSans-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open-Sans';
-  src: url("../fonts/OpenSans-ExtraBold.woff2");
+  src: url("../fonts/OpenSans-ExtraBold.woff");
   font-weight: 800;
   font-style: normal;
 }
 
-:root {}
+:root {
+  --main-color: #9D5CD0;
+  --black-color: #333;
+}
 
 * {
   box-sizing: border-box;
@@ -62,6 +65,11 @@ a {
 }
 
 /* Header Block */
+
+.header {
+  position: absolute;
+  width: 100%;
+}
 
 .header-top {
   min-height: 100px;
@@ -95,30 +103,93 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.banner {
+
+/* Hero Section */
+
+.hero__banner {
   position: absolute;
-  left: 0;
-  top: 0;
   z-index: -1;
 }
-.banner__slides {
+
+.hero__banner-slides {
   width: 100vw;
   min-height: 800px;
 }
-.banner__slide1 {
-  background-image: url('../images/banner-slide1.jpg');
+
+.hero__banner-slide1 {
+  background-image: url('../images/hero-slide1.jpg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.banner__slide2 {
-  background-image: url('../images/banner-slide2.jpg');
+.hero__banner-slide2 {
+  background-image: url('../images/hero-slide2.jpg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.banner__slide3 {
-  background-image: url('../images/banner-slide3.jpg');
+.hero__banner-slide3 {
+  background-image: url('../images/hero-slide3.jpg');
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.hero__content {
+  min-height: 800px;
+  padding-top: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__content-heading {
+  margin-bottom: 20px;
+  max-width: 560px;
+  color: white;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 82.8px;
+}
+
+.hero__content-detailed {
+  margin-bottom: 92px;
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.hero__content-btn {
+  padding: 22.5px 35px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  border-radius: 100px;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+/* About Section */
+.about__container {
+  padding-top: 85px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about__container-heading {
+  margin-bottom: 23px;
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--black-color);
+}
+.about__container-detailed {
+  max-width: 1060px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2em;
+  color: var(--black-color);
+}
+
