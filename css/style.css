@@ -51,6 +51,11 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+}
+
 button {
   border: none;
 }
@@ -103,6 +108,39 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.header-bottom__menus {
+  display: flex;
+  align-items: center;
+  min-height: inherit;
+}
+
+.menus-item {
+  position: relative;
+  color: white;
+}
+
+.menus-item__list {
+  position: absolute;
+  top: 44px;
+  width: 300px;
+  height: 300px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menus-item__list-item {
+  width: 220px;
+  height: 40px;
+}
+
+.menus-item__list-lnk {
+  height: inherit;
+  display: block;
+  color: white;
+  padding-left: 14px;
+  padding-top: 9px;
+  background-image: url('/images/header-bottom__realism1.jpg');
+}
 
 /* Hero Section */
 
@@ -171,6 +209,7 @@ a {
 }
 
 /* About Section */
+
 .about__container {
   padding-top: 85px;
   margin-bottom: 80px;
@@ -185,6 +224,7 @@ a {
   font-weight: 400;
   color: var(--black-color);
 }
+
 .about__container-detailed {
   max-width: 1060px;
   font-size: 16px;
@@ -192,4 +232,3 @@ a {
   line-height: 2em;
   color: var(--black-color);
 }
-
