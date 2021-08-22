@@ -125,21 +125,38 @@ a {
   width: 300px;
   height: 300px;
   padding: 40px;
+  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .menus-item__list-item {
+  display: flex;
+  align-items: center;
   width: 220px;
   height: 40px;
+  padding-left: 14px;
+}
+
+.realism1 {
+  background-image: url('/images/header-bottom__realism1.jpg');
+}
+.realism2 {
+  background-image: url('/images/header-bottom__realism2.jpg');
+}
+.realism3 {
+  background-image: url('/images/header-bottom__realism3.jpg');
+}
+.realism4 {
+  background-image: url('/images/header-bottom__realism4.jpg');
+}
+
+
+.menus-item__list-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .menus-item__list-lnk {
-  height: inherit;
-  display: block;
   color: white;
-  padding-left: 14px;
-  padding-top: 9px;
-  background-image: url('/images/header-bottom__realism1.jpg');
 }
 
 /* Hero Section */
