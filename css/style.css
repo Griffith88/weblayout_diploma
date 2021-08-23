@@ -104,32 +104,55 @@ a {
 }
 
 .header-bottom {
+  display: flex;
+  align-items: center;
   min-height: 70px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header-bottom__menus {
+  margin-right: auto;
   display: flex;
   align-items: center;
   min-height: inherit;
 }
 
+.header-bottom__menus-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-bottom__menus-btn:not(:last-child) {
+  margin-right: 96px;
+}
+
 .menus-item {
+  margin-right: 5px;
   position: relative;
   color: white;
 }
 
 .menus-item__list {
   position: absolute;
+  visibility: hidden;
+  opacity: 0;
   top: 44px;
   width: 300px;
   height: 300px;
   padding: 40px;
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.6);
+  transition: visibility .5s, opacity .5s linear
 }
 
-.menus-item__list-item {
+.menus-item__list-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menus-item__list-lnk {
   display: flex;
   align-items: center;
   width: 220px;
@@ -140,16 +163,91 @@ a {
 .realism1 {
   background-image: url('/images/header-bottom__realism1.jpg');
 }
+
 .realism2 {
   background-image: url('/images/header-bottom__realism2.jpg');
 }
+
 .realism3 {
   background-image: url('/images/header-bottom__realism3.jpg');
 }
+
 .realism4 {
   background-image: url('/images/header-bottom__realism4.jpg');
 }
 
+.impressionism1 {
+  background-image: url('/images/header-bottom_impressionism1.jpg');
+}
+
+.impressionism2 {
+  background-image: url('/images/header-bottom_impressionism2.jpg');
+}
+
+.impressionism3 {
+  background-image: url('/images/header-bottom_impressionism3.jpg');
+}
+
+.impressionism4 {
+  background-image: url('/images/header-bottom_impressionism4.jpg');
+}
+
+.postimmpressioinism1 {
+  background-image: url('/images/header-bottom_postimmpressioinism1.jpg');
+}
+
+.postimmpressioinism2 {
+  background-image: url('/images/header-bottom_postimmpressioinism2.jpg');
+}
+
+.postimmpressioinism3 {
+  background-image: url('/images/header-bottom_postimmpressioinism3.jpg');
+}
+
+.postimmpressioinism4 {
+  background-image: url('/images/header-bottom_postimmpressioinism4.jpg');
+}
+
+.avangard1 {
+  background-image: url('/images/header-bottom__avangard1.jpg');
+}
+
+.avangard2 {
+  background-image: url('/images/header-bottom__avangard2.jpg');
+}
+
+.avangard3 {
+  background-image: url('/images/header-bottom__avangard3.jpg');
+}
+
+.avangard4 {
+  background-image: url('/images/header-bottom__avangard4.jpg');
+}
+
+.futurism1 {
+  background-image: url('/images/header-bottom__futurism1.jpg');
+}
+
+.futurism2 {
+  background-image: url('/images/header-bottom__futurism2.jpg');
+}
+
+.futurism3 {
+  background-image: url('/images/header-bottom__futurism3.jpg');
+}
+
+.futurism4 {
+  background-image: url('/images/header-bottom__futurism4.jpg');
+}
+
+.simplebar-vertical .simplebar-scrollbar {
+  width: 2px;
+}
+
+.simplebar-vertical .simplebar-scrollbar::before {
+  background: white;
+  width: inherit;
+}
 
 .menus-item__list-item:not(:last-child) {
   margin-bottom: 20px;
@@ -157,6 +255,44 @@ a {
 
 .menus-item__list-lnk {
   color: white;
+}
+
+.menus-item-icon {
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  transform: rotate(45deg);
+}
+
+.menus-item-icon-active {
+  transform: rotate(225deg);
+}
+
+.header-bottom__search {
+  display: flex;
+}
+#header-bottom__search {
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.header-bottom__search-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/header_search-icon.svg");
+  background-size: 20px 20px;
+}
+
+#header-bottom__search::placeholder {
+  color: white;
+}
+
+#header-bottom__search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 
 /* Hero Section */

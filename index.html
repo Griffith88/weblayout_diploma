@@ -10,11 +10,15 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="/css/jquery-ui.css">
+  <link rel="stylesheet" href="/css/simplebar.css">
   <link rel="stylesheet" href="/css/style.css">
 
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/jquery-1.12.4.js"></script>
   <script src="/js/jquery-ui.js"></script>
+
+  <script src="/js/simplebar.min.js"></script>
+  <script src="/js/header_bottom_menus.js"></script>
 
   <title>Blanchard</title>
 </head>
@@ -43,23 +47,150 @@
     </div>
     <div class="header__container-bottom header-bottom container">
       <div class="header-bottom__menus">
-        <div class="header-bottom__menus-item menus-item">
-          Реализм
-          <div class="menus-item__list">
-            <a href="#" class="menus-item__list-item realism1">
-              <div class="menus-item__list-lnk">Тинторетто</div>
-            </a>
-            <a href="#" class="menus-item__list-item realism2">
-              <div class="menus-item__list-lnk">Фридрих</div>
-            </a>
-            <a href="#" class="menus-item__list-item realism3">
-              <div class="menus-item__list-lnk">Леонардо</div>
-            </a>
-            <a href="#" class="menus-item__list-item realism4">
-              <div class="menus-item__list-lnk">Верроккьо</div>
-            </a>
-          </div>
+        <div class="header-bottom__menus-btn realism">
+          <div class="header-bottom__menus-item menus-item">
+            Реализм
+            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list realism-list">
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk realism1">
+                  <div class="menus-item__list-detail">Тинторетто</div>
+              </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk realism2">
+                  <div class="menus-item__list-detail">Фридрих</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk realism3">
+                  <div class="menus-item__list-detail">Леонардо</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+              <a href="#" class="menus-item__list-lnk realism4">
+                <div class="menus-item__list-detail">Верроккьо</div>
+              </a>
+              </li>
+            </ul>
         </div>
+        <div class="menus-item-icon realism-icon"></div>
+        </div>
+        <div class="header-bottom__menus-btn impressionism">
+          <div class="header-bottom__menus-item menus-item">
+            Импессионизм
+            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list impressionism-list">
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk impressionism1">
+                  <div class="menus-item__list-detail">Моне</div>
+              </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk impressionism2">
+                  <div class="menus-item__list-detail">Сислей</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk impressionism3">
+                  <div class="menus-item__list-detail">Мане</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+              <a href="#" class="menus-item__list-lnk impressionism4">
+                <div class="menus-item__list-detail">Ренуар</div>
+              </a>
+              </li>
+            </ul>
+        </div>
+        <div class="menus-item-icon impressionism-icon"></div>
+        </div>
+        <div class="header-bottom__menus-btn postimmpressioinism">
+          <div class="header-bottom__menus-item menus-item">
+            Постимпрессионизм
+            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list postimmpressioinism-list">
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk postimmpressioinism1">
+                  <div class="menus-item__list-detail">Ван Гог</div>
+              </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk postimmpressioinism2">
+                  <div class="menus-item__list-detail">Сезанн</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk postimmpressioinism3">
+                  <div class="menus-item__list-detail">Гоген</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+              <a href="#" class="menus-item__list-lnk postimmpressioinism4">
+                <div class="menus-item__list-detail">Сёра</div>
+              </a>
+              </li>
+            </ul>
+        </div>
+        <div class="menus-item-icon postimmpressioinism-icon"></div>
+        </div>
+        <div class="header-bottom__menus-btn avangard">
+          <div class="header-bottom__menus-item menus-item">
+            Авангард
+            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list avangard-list">
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk avangard1">
+                  <div class="menus-item__list-detail">Кандинский</div>
+              </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk avangard2">
+                  <div class="menus-item__list-detail">Маринетти</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk avangard3">
+                  <div class="menus-item__list-detail">Малевич</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+              <a href="#" class="menus-item__list-lnk avangard4">
+                <div class="menus-item__list-detail">Пикассо</div>
+              </a>
+              </li>
+            </ul>
+        </div>
+        <div class="menus-item-icon avangard-icon"></div>
+        </div>
+        <div class="header-bottom__menus-btn futurism">
+          <div class="header-bottom__menus-item menus-item">
+            Футуризм
+            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list futurism-list">
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk futurism1">
+                  <div class="menus-item__list-detail">Карра</div>
+              </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk futurism2">
+                  <div class="menus-item__list-detail">Прателла</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+                <a href="#" class="menus-item__list-lnk futurism3">
+                  <div class="menus-item__list-detail">Северини</div>
+                </a>
+              </li>
+              <li class="menus-item__list-item">
+              <a href="#" class="menus-item__list-lnk futurism4">
+                <div class="menus-item__list-detail">Балла</div>
+              </a>
+              </li>
+            </ul>
+        </div>
+        <div class="menus-item-icon futurism-icon"></div>
+        </div>
+      </div>
+      <div class="header-bottom__search">
+        <div class="header-bottom__search-icon"></div>
+        <input type="search" name="header-bottom__search" id="header-bottom__search" placeholder="Поиск по сайту">
       </div>
     </div>
   </header>
