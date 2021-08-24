@@ -35,6 +35,8 @@
 
 :root {
   --main-color: #9D5CD0;
+  --active-color: #7943A4;
+  --focus-color: #C283F3;
   --black-color: #333;
 }
 
@@ -83,6 +85,10 @@ a {
   background-color: black;
 }
 
+.header-top__burger {
+  display: none;
+}
+
 .header-top__logo-lnk {
   margin-right: 179px;
 }
@@ -97,6 +103,35 @@ a {
   color: white;
   font-weight: 600;
   font-size: 18px;
+}
+
+.header-top__nav-item:hover, .header-top__btn:hover {
+  color: var(--focus-color);
+}
+
+.header-top__btn:hover>svg>path {
+  fill: var(--focus-color);
+}
+
+.header-top__btn:active>svg>path {
+  fill: var(--main-color);
+}
+
+.header-top__search {
+  display: none;
+}
+
+.header-top__nav-item:active {
+  color: var(--active-color);
+}
+
+.header-top__btn:active {
+  color: var(--main-color);
+}
+
+.header-top__nav-item:focus, .header-top__btn:focus {
+  outline: none;
+  background-color: var(--active-color);
 }
 
 .header-top__nav-item:not(:last-child) {
@@ -117,10 +152,34 @@ a {
   min-height: inherit;
 }
 
-.header-bottom__menus-btn {
+.header-bottom__menus-lnk {
   display: flex;
   align-items: center;
-  cursor: pointer;
+}
+
+.header-bottom__menus-btn {
+  position: relative;
+}
+
+.header-bottom__menus-lnk:hover .header-bottom__menus-item {
+  color: var(--main-color);
+}
+
+.header-bottom__menus-lnk:hover .menus-item-icon {
+  border-color: var(--main-color);
+}
+
+.header-bottom__menus-lnk:active .header-bottom__menus-item {
+  color: var(--active-color);
+}
+
+.header-bottom__menus-lnk:active .menus-item-icon {
+  border-color: var(--active-color);
+}
+
+.header-bottom__menus-lnk:focus {
+  outline: none;
+  background-color: var(--focus-color);
 }
 
 .header-bottom__menus-btn:not(:last-child) {
@@ -129,8 +188,9 @@ a {
 
 .menus-item {
   margin-right: 5px;
-  position: relative;
   color: white;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .menus-item__list {
@@ -158,6 +218,15 @@ a {
   width: 220px;
   height: 40px;
   padding-left: 14px;
+}
+
+.menus-item__list-lnk:hover, .menus-item__list-lnk:active {
+  outline: 2px solid var(--main-color);
+}
+
+.menus-item__list-lnk:active {
+  outline: 2px solid #D1A9F0;
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
 .realism1 {
@@ -272,11 +341,27 @@ a {
 .header-bottom__search {
   display: flex;
 }
-#header-bottom__search {
+
+#header-bottom__search, .header-top__search-input {
   border: none;
   border-bottom: 1px solid white;
-  color: white;
   background-color: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.header-top__search-input {
+  display: none;
+}
+
+#header-bottom__search:hover, #header-bottom__search:active, #header-top__search-input:active, #header-top__search-input:hover {
+  border-color: var(--active-color);
+}
+
+#header-bottom__search:focus, #header-top__search-input:focus {
+  outline: none;
+  border-color: var(--focus-color);
 }
 
 .header-bottom__search-icon {
@@ -291,7 +376,11 @@ a {
   color: white;
 }
 
-#header-bottom__search::-webkit-search-cancel-button {
+.header-top__search-cancel {
+  display: none;
+}
+
+#header-bottom__search::-webkit-search-cancel-button, #header-top__search-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -310,19 +399,22 @@ a {
 .hero__banner-slide1 {
   background-image: url('../images/hero-slide1.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero__banner-slide2 {
   background-image: url('../images/hero-slide2.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero__banner-slide3 {
   background-image: url('../images/hero-slide3.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero__content {
@@ -352,6 +444,7 @@ a {
 }
 
 .hero__content-btn {
+  position: relative;
   padding: 22.5px 35px;
   font-size: 18px;
   font-weight: 700;
@@ -359,6 +452,30 @@ a {
   border-radius: 100px;
   background-color: var(--main-color);
   cursor: pointer;
+}
+
+.hero__content-btn:hover {
+  border: 3px solid #D1A9F0;
+}
+
+.hero__content-btn:active {
+  background-color: var(--active-color);
+}
+
+.hero__content-btn:focus {
+  outline: none;
+}
+
+.hero__content-btn:focus::before {
+  content: '';
+  top: -7px;
+  left: -7px;
+  width: 235px;
+  height: 25px;
+  position: absolute;
+  padding: 25px 40px;
+  border: 2px solid var(--focus-color);
+  border-radius: 100px;
 }
 
 /* About Section */
@@ -384,4 +501,78 @@ a {
   font-weight: 400;
   line-height: 2em;
   color: var(--black-color);
+}
+
+/* ADAPTATION  */
+
+@media (max-width: 1650px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 1420px) {
+  /* Header Section Adaptation */
+  .header-top {
+    justify-content: space-between;
+  }
+  .header-top__burger {
+    display: block;
+  }
+  .header-top__logo-lnk {
+    margin-right: 0;
+  }
+  .header-top__nav {
+    display: none;
+  }
+  .header-top__btn {
+    display: none;
+  }
+  .header-top__search {
+    display: flex;
+  }
+  .search-input-active {
+    display: block;
+  }
+  .header-bottom {
+    display: none;
+  }
+  /* Hero Section Adaptation */
+  .hero__content {
+    padding-top: 205px;
+    min-height: 768px;
+  }
+  .hero__banner-slides {
+    min-height: 768px;
+  }
+  .hero__banner-slide1 {
+    background-image: url('../images/hero-slide1_1024.jpg');
+  }
+  .hero__banner-slide2 {
+    background-image: url('../images/hero-slide2_1024.jpg');
+  }
+  .hero__banner-slide3 {
+    background-image: url('../images/hero-slide3_1024.jpg');
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header Section Adaptation */
+  .header-top__search-input {
+    width: inherit;
+  }
+  .header-top__search-full {
+    padding-right: 25px;
+    width: 100%;
+  }
+  .header-top__burger-hidden, .header-top__logo-hidden {
+    display: none;
+  }
+  .header-top__search-canceled {
+    display: block;
+    width: 27px;
+    height: 27px;
+    background-image: url('../images/header-X.svg');
+  }
 }

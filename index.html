@@ -16,7 +16,7 @@
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/jquery-1.12.4.js"></script>
   <script src="/js/jquery-ui.js"></script>
-
+  <script src="/js/header-top_search.js"></script>
   <script src="/js/simplebar.min.js"></script>
   <script src="/js/header_bottom_menus.js"></script>
 
@@ -26,166 +26,183 @@
 <body>
   <header class="header">
     <div class="header__container-top header-top container">
-      <a href="#" class="header-top__logo-lnk">
+      <a href="" class="header-top__burger">
+        <svg width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
+          <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+          <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+          </svg>
+      </a>
+      <a href="" class="header-top__logo-lnk">
         <img src="/images/header-top__logo.svg" alt="Logo.svg">
       </a>
       <nav class="header-top__nav">
-        <a href="#" class="header-top__nav-item" aria-label="О нас">О нас</a>
-        <a href="#" class="header-top__nav-item" aria-label="Галерея">Галерея</a>
-        <a href="#" class="header-top__nav-item" aria-label="Каталог">Каталог</a>
-        <a href="#" class="header-top__nav-item" aria-label="События">События</a>
-        <a href="#" class="header-top__nav-item" aria-label="Издания">Издания</a>
-        <a href="#" class="header-top__nav-item" aria-label="Проекты">Проекты</a>
-        <a href="#" class="header-top__nav-item" aria-label="Контакты">Контакты</a>
+        <a href="" class="header-top__nav-item" aria-label="О нас">О нас</a>
+        <a href="" class="header-top__nav-item" aria-label="Галерея">Галерея</a>
+        <a href="" class="header-top__nav-item" aria-label="Каталог">Каталог</a>
+        <a href="" class="header-top__nav-item" aria-label="События">События</a>
+        <a href="" class="header-top__nav-item" aria-label="Издания">Издания</a>
+        <a href="" class="header-top__nav-item" aria-label="Проекты">Проекты</a>
+        <a href="" class="header-top__nav-item" aria-label="Контакты">Контакты</a>
       </nav>
-      <a href="#" class="header-top__btn">
+      <a href="" class="header-top__btn">
         <svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+          <path
+            d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+            fill="white" />
         </svg>
         Войти
       </a>
+      <div class="header-top__search">
+        <svg class="header-top__search-icon" width="29.45" height="28.82" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+        </svg>
+        <input type="search" id="header-top__search-input" class="header-top__search-input">
+      </div>
+      <div class="header-top__search-cancel"></div>
     </div>
     <div class="header__container-bottom header-bottom container">
       <div class="header-bottom__menus">
         <div class="header-bottom__menus-btn realism">
-          <div class="header-bottom__menus-item menus-item">
-            Реализм
-            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list realism-list">
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk realism1">
-                  <div class="menus-item__list-detail">Тинторетто</div>
+          <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list realism-list">
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk realism1">
+                <div class="menus-item__list-detail">Тинторетто</div>
               </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk realism2">
-                  <div class="menus-item__list-detail">Фридрих</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk realism3">
-                  <div class="menus-item__list-detail">Леонардо</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-              <a href="#" class="menus-item__list-lnk realism4">
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk realism2">
+                <div class="menus-item__list-detail">Фридрих</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk realism3">
+                <div class="menus-item__list-detail">Леонардо</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk realism4">
                 <div class="menus-item__list-detail">Верроккьо</div>
               </a>
-              </li>
-            </ul>
-        </div>
-        <div class="menus-item-icon realism-icon"></div>
+            </li>
+          </ul>
+          <a class="header-bottom__menus-lnk" href="#">
+            <div class="header-bottom__menus-item menus-item">Реализм</div>
+            <div class="menus-item-icon realism-icon"></div>
+          </a>
         </div>
         <div class="header-bottom__menus-btn impressionism">
-          <div class="header-bottom__menus-item menus-item">
-            Импессионизм
-            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list impressionism-list">
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk impressionism1">
-                  <div class="menus-item__list-detail">Моне</div>
+          <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list impressionism-list">
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk impressionism1">
+                <div class="menus-item__list-detail">Моне</div>
               </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk impressionism2">
-                  <div class="menus-item__list-detail">Сислей</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk impressionism3">
-                  <div class="menus-item__list-detail">Мане</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-              <a href="#" class="menus-item__list-lnk impressionism4">
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk impressionism2">
+                <div class="menus-item__list-detail">Сислей</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk impressionism3">
+                <div class="menus-item__list-detail">Мане</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk impressionism4">
                 <div class="menus-item__list-detail">Ренуар</div>
               </a>
-              </li>
-            </ul>
-        </div>
-        <div class="menus-item-icon impressionism-icon"></div>
+            </li>
+          </ul>
+          <a href="#" class="header-bottom__menus-lnk">
+            <div class="header-bottom__menus-item menus-item">Импессионизм</div>
+            <div class="menus-item-icon impressionism-icon"></div>
+          </a>
         </div>
         <div class="header-bottom__menus-btn postimmpressioinism">
-          <div class="header-bottom__menus-item menus-item">
-            Постимпрессионизм
-            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list postimmpressioinism-list">
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk postimmpressioinism1">
-                  <div class="menus-item__list-detail">Ван Гог</div>
+          <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list postimmpressioinism-list">
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk postimmpressioinism1">
+                <div class="menus-item__list-detail">Ван Гог</div>
               </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk postimmpressioinism2">
-                  <div class="menus-item__list-detail">Сезанн</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk postimmpressioinism3">
-                  <div class="menus-item__list-detail">Гоген</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-              <a href="#" class="menus-item__list-lnk postimmpressioinism4">
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk postimmpressioinism2">
+                <div class="menus-item__list-detail">Сезанн</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk postimmpressioinism3">
+                <div class="menus-item__list-detail">Гоген</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk postimmpressioinism4">
                 <div class="menus-item__list-detail">Сёра</div>
               </a>
-              </li>
-            </ul>
-        </div>
-        <div class="menus-item-icon postimmpressioinism-icon"></div>
+            </li>
+          </ul>
+          <a href="#" class="header-bottom__menus-lnk">
+            <div class="header-bottom__menus-item menus-item">Постимпрессионизм</div>
+            <div class="menus-item-icon postimmpressioinism-icon"></div>
+          </a>
         </div>
         <div class="header-bottom__menus-btn avangard">
-          <div class="header-bottom__menus-item menus-item">
-            Авангард
-            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list avangard-list">
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk avangard1">
-                  <div class="menus-item__list-detail">Кандинский</div>
+          <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list avangard-list">
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk avangard1">
+                <div class="menus-item__list-detail">Кандинский</div>
               </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk avangard2">
-                  <div class="menus-item__list-detail">Маринетти</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk avangard3">
-                  <div class="menus-item__list-detail">Малевич</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-              <a href="#" class="menus-item__list-lnk avangard4">
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk avangard2">
+                <div class="menus-item__list-detail">Маринетти</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk avangard3">
+                <div class="menus-item__list-detail">Малевич</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk avangard4">
                 <div class="menus-item__list-detail">Пикассо</div>
               </a>
-              </li>
-            </ul>
-        </div>
-        <div class="menus-item-icon avangard-icon"></div>
+            </li>
+          </ul>
+          <a href="#" class="header-bottom__menus-lnk">
+            <div class="header-bottom__menus-item menus-item">Авангард</div>
+            <div class="menus-item-icon avangard-icon"></div>
+          </a>
         </div>
         <div class="header-bottom__menus-btn futurism">
-          <div class="header-bottom__menus-item menus-item">
-            Футуризм
-            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list futurism-list">
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk futurism1">
-                  <div class="menus-item__list-detail">Карра</div>
+          <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list futurism-list">
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk futurism1">
+                <div class="menus-item__list-detail">Карра</div>
               </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk futurism2">
-                  <div class="menus-item__list-detail">Прателла</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-                <a href="#" class="menus-item__list-lnk futurism3">
-                  <div class="menus-item__list-detail">Северини</div>
-                </a>
-              </li>
-              <li class="menus-item__list-item">
-              <a href="#" class="menus-item__list-lnk futurism4">
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk futurism2">
+                <div class="menus-item__list-detail">Прателла</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk futurism3">
+                <div class="menus-item__list-detail">Северини</div>
+              </a>
+            </li>
+            <li class="menus-item__list-item">
+              <a href="" class="menus-item__list-lnk futurism4">
                 <div class="menus-item__list-detail">Балла</div>
               </a>
-              </li>
-            </ul>
-        </div>
-        <div class="menus-item-icon futurism-icon"></div>
+            </li>
+          </ul>
+          <a href="#" class="header-bottom__menus-lnk">
+            <div class="header-bottom__menus-item menus-item">Футуризм</div>
+            <div class="menus-item-icon futurism-icon"></div>
+          </a>
         </div>
       </div>
       <div class="header-bottom__search">
@@ -208,11 +225,12 @@
       <div class="hero__content container">
         <h1 class="hero__content-heading">Прикоснитесь к прекрасному</h1>
         <p class="hero__content-detailed">
-          Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+          Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
+          предложений.
         </p>
         <button class="hero__content-btn">Подписаться на рассылку</button>
       </div>
-      <script>
+      <!-- <script>
         const swiper = new Swiper('.swiper-container', {
           // Optional parameters
           loop: true,
@@ -222,14 +240,21 @@
             delay: 12000,
           },
         });
-      </script>
+      </script> -->
     </section>
 
     <section class="about">
       <div class="about__container container">
         <h2 class="about__container-heading">О нас</h2>
         <p class="about__container-detailed">
-          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
+          Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
+          внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
+          исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
+          учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+          действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
+          быть разоблачены.
         </p>
       </div>
     </section>
