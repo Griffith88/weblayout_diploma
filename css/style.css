@@ -89,6 +89,36 @@ a {
   display: none;
 }
 
+.header-top__menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 37px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 768px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+.header-top__menu-cancel {
+  display: block;
+  width: 29px;
+  height: 29px;
+  background-image: url('../images/header-menu-X.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.header-top__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .header-top__logo-lnk {
   margin-right: 179px;
 }
@@ -99,13 +129,13 @@ a {
   margin-right: auto;
 }
 
-.header-top__nav-item, .header-top__btn {
+.header-top__nav-item, .header-top__btn, .header-top__menu-item, .header-top__menu-btn {
   color: white;
   font-weight: 600;
   font-size: 18px;
 }
 
-.header-top__nav-item:hover, .header-top__btn:hover {
+.header-top__nav-item:hover, .header-top__btn:hover, .header-top__menu-item:hover {
   color: var(--focus-color);
 }
 
@@ -121,7 +151,7 @@ a {
   display: none;
 }
 
-.header-top__nav-item:active {
+.header-top__nav-item:active, .header-top__menu-item:active {
   color: var(--active-color);
 }
 
@@ -129,7 +159,7 @@ a {
   color: var(--main-color);
 }
 
-.header-top__nav-item:focus, .header-top__btn:focus {
+.header-top__nav-item:focus, .header-top__btn:focus, .header-top__menu-item:focus {
   outline: none;
   background-color: var(--active-color);
 }
@@ -471,8 +501,8 @@ a {
   content: '';
   top: -7px;
   left: -7px;
-  width: 235px;
-  height: 25px;
+  width: 77%;
+  height: 40%;
   position: absolute;
   padding: 25px 40px;
   border: 2px solid var(--focus-color);
@@ -663,11 +693,10 @@ a {
     font-size: 12px;
   }
   .hero__content-btn:focus::before {
-    width: 157px;
-    height: 18px;
+    width: 68%;
+    height: 33%;
   }
   /* About Container Section  */
-
   .about__container {
     padding-top: 50px;
   }
@@ -679,5 +708,4 @@ a {
   .about__container-detailed {
     font-size: 14px;
   }
-
 }
