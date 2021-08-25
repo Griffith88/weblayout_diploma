@@ -662,6 +662,10 @@ a {
   .hero__content-btn {
     font-size: 12px;
   }
+  .hero__content-btn:focus::before {
+    width: 157px;
+    height: 18px;
+  }
   /* About Container Section  */
 
   .about__container {
@@ -675,4 +679,5 @@ a {
   .about__container-detailed {
     font-size: 14px;
   }
+
 }
