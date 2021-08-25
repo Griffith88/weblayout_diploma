@@ -388,6 +388,7 @@ a {
 
 .hero__banner {
   width: 100%;
+  overflow: hidden;
   position: absolute;
   z-index: -1;
 }
