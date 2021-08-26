@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/css/jquery-ui.css">
   <link rel="stylesheet" href="/css/simplebar.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/choices.min.css">
 
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/jquery-1.12.4.js"></script>
@@ -20,6 +21,7 @@
   <script src="/js/simplebar.min.js"></script>
   <script src="/js/header_bottom_menus.js"></script>
   <script src="/js/header-burger-menu.js"></script>
+  <script src="/js/choices.min.js"></script>
 
   <title>Blanchard</title>
 </head>
@@ -27,7 +29,7 @@
 <body>
   <header class="header">
     <div class="header__container-top header-top container">
-      <button  class="header-top__burger">
+      <button class="header-top__burger">
         <svg width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white" />
           <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white" />
@@ -247,16 +249,8 @@
           <div class="swiper-slide hero__banner-slides hero__banner-slide3"></div>
         </div>
       </div>
-      <div class="hero__content container">
-        <h1 class="hero__content-heading">Прикоснитесь<br>к&nbsp;прекрасному</h1>
-        <p class="hero__content-detailed">
-          Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
-          предложений.
-        </p>
-        <button class="hero__content-btn">Подписаться на рассылку</button>
-      </div>
       <script>
-        const swiper = new Swiper('.swiper-container', {
+        const swiper = new Swiper('.hero__banner', {
           // Optional parameters
           loop: true,
           freeMode: true,
@@ -266,6 +260,14 @@
           }
         });
       </script>
+      <div class="hero__content container">
+        <h1 class="hero__content-heading">Прикоснитесь<br>к&nbsp;прекрасному</h1>
+        <p class="hero__content-detailed">
+          Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
+          предложений.
+        </p>
+        <button class="hero__content-btn">Подписаться на рассылку</button>
+      </div>
     </section>
 
     <section class="about">
@@ -285,7 +287,96 @@
     </section>
 
     <section class="galery">
+      <div class="galery-container container">
+        <h2 class="galery-container__heading">Галерея</h2>
+        <div class="galery-container__content galery-content">
+          <div class="galery-content__left galery-left">
+            <label class="label-selector" for="select-form">Фильтр:</label>
+            <select class="galery-left__selector__form selector-form" id="select-form">
+              <option value="" selected disabled data-choices-placeholder>Живопись</option>
+              <option value="Рисунок">Рисунок</option>
+              <option value="Скульптура">Скульптура</option>
+            </select>
+            <p class="galaery-left__text">
+              Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+              <a class="galaery-left__text-lnk" href="">авторизуйтесь</a>
+              , либо воспользуйтесь лицензией.
+            </p>
+            <script>
+              const element = document.querySelector(".selector-form")
+              const choices = new Choices(element, {
+                searchEnabled: false,
+                position: "bottom",
+                shouldSort: false,
+              })
+            </script>
+          </div>
+          <div class="galery-content_right galery-right">
+            <div class="swiper-container swiper galery-right__cards-form">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper galery-cards__wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide galery-right__cards galery-right__card1"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card2"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card3"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card4"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card5"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card6"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card7"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card8"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card9"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card10"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card11"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card12"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card13"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card14"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card15"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card16"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card17"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card18"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card19"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card20"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card21"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card22"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card23"></div>
+                <div class="swiper-slide galery-right__cards galery-right__card24"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <script>
+                const swiper_galery = new Swiper('.galery-right__cards-form', {
+                  slidesPerView: 3,
+                  grid: {
+                    rows: 2,
+                  },
+                  spaceBetween: 30,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  // Optional parameters
 
+                  // slidesPerView: 3,
+                  // grid: {
+                  //   rows: 2,
+                  // },
+                  // spaceBetween: 50,
+                  // pagination: {
+                  //   el: ".swiper-pagination",
+                  //   type: "fraction",
+                  // },
+                  // navigation: {
+                  //   nextEl: ".swiper-button-next",
+                  //   prevEl: ".swiper-button-prev",
+                  // },
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </body>
