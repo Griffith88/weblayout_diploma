@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', function () {
     var search_form = document.querySelector('.header-top__search')
     var search_cancel = document.querySelector('.header-top__search-cancel')
     var header_top = document.querySelector('.header-top')
-    console.log(search)
     if (btn.contains(event.target) || search.contains(event.target))  {
       search.classList.add('search-input-active')
       logo.classList.add('header-top__logo-hidden')

@@ -87,13 +87,13 @@ a {
 
 .header-top__burger {
   display: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .header-top__menu {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: none;
   padding-top: 37px;
   top: 0;
   left: 0;
@@ -103,17 +103,29 @@ a {
   z-index: 1;
 }
 
+.header-top__menu-active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .header-top__menu-cancel {
   display: block;
+  margin-bottom: 52px;
   width: 29px;
   height: 29px;
   background-image: url('../images/header-menu-X.svg');
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
+.header-top__menu-item:not(:last-child) {
+  margin-bottom: 45px;
+}
 
 .header-top__menu-list {
+  margin-bottom: 135px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -127,6 +139,37 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-right: auto;
+}
+
+.header-top__menu-btn {
+  position: relative;
+  padding: 20px 86px;
+  border: 2px solid var(--main-color);
+  border-radius: 100px;
+}
+
+.header-top__menu-btn:hover {
+  background-color: var(--main-color);
+}
+
+.header-top__menu-btn:active {
+  border-color: #D1A9F0;
+  background-color: var(--main-color);
+}
+
+.header-top__menu-btn:focus {
+  outline: none;
+}
+
+.header-top__menu-btn:focus::before {
+  content: "";
+  top: 5px;
+  left: 5px;
+  height: 76%;
+  width: 94%;
+  position: absolute;
+  border: 2px solid var(--focus-color);
+  border-radius: 100px;
 }
 
 .header-top__nav-item, .header-top__btn, .header-top__menu-item, .header-top__menu-btn {
@@ -660,6 +703,34 @@ a {
   .header-top__search {
     width: auto;
   }
+  .header-top__menu {
+    padding-top: 15px;
+    min-height: 355px;
+  }
+  .header-top__menu-cancel {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 16px;
+  }
+  .header-top__menu-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .header-top__menu-item {
+    font-size: 16px;
+  }
+  .header-top__menu-list {
+    margin-bottom: 26px;
+  }
+  .header-top__menu-btn {
+    padding: 10px 32px;
+    font-size: 12px;
+  }
+  .header-top__menu-btn:focus::before {
+    top: 2px;
+    left: 2px;
+    height: 77%;
+    width: 93%;
+  }
   /* Hero Section Adaptation */
   .hero__banner-slide1 {
     background-image: url('../images/hero-slide1_320.jpg');
@@ -676,7 +747,7 @@ a {
     align-items: center;
   }
   .hero__banner-slides {
-    min-height: 335px;
+    min-height: 355px;
   }
   .hero__content-heading {
     font-size: 32px;
