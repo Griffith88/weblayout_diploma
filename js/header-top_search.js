@@ -1,30 +1,35 @@
-window.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('click', function (event) {
-    var btn = document.querySelector('.header-top__search-icon')
-    var search = document.querySelector('.header-top__search-input')
-    var logo = document.querySelector('.header-top__logo-lnk')
-    var burger = document.querySelector('.header-top__burger')
-    var search_form = document.querySelector('.header-top__search')
-    var search_cancel = document.querySelector('.header-top__search-cancel')
-    var header_top = document.querySelector('.header-top')
-    if (btn.contains(event.target) || search.contains(event.target))  {
-      search.classList.add('search-input-active')
-      logo.classList.add('header-top__logo-hidden')
-      burger.classList.add('header-top__burger-hidden')
-      search_form.classList.add('header-top__search-full')
-      search_cancel.classList.add('header-top__search-canceled')
-      header_top.classList.add('header-top__searching')
-    }
-    else if (search_cancel.contains(event.target)) {
-      search.value = ""
-    }
-    else {
-      search.classList.remove('search-input-active')
-      logo.classList.remove('header-top__logo-hidden')
-      burger.classList.remove('header-top__burger-hidden')
-      search_form.classList.remove('header-top__search-full')
-      search_cancel.classList.remove('header-top__search-canceled')
-      header_top.classList.remove('header-top__searching')
-    }
-  });
+window.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(event) {
+        btn = document.querySelector('.header-top__search-form')
+        btn_submit = document.querySelector('.header-top__search-submit')
+        icon = document.querySelector('.header-top__search-btn')
+        submit_block = document.querySelector('.submit-block')
+        search = document.querySelector('.header-top__search-input')
+        search_cancel = document.querySelector('.header-top__search-cancel')
+        logo = document.querySelector('.header-top__logo-lnk')
+        burger = document.querySelector('.header-top__burger')
+        if (search_cancel.contains(event.target)) {
+            search.value = ""
+        } else if (btn.contains(event.target) || search.contains(event.target)) {
+            icon.classList.add('is-hidden')
+            search.classList.add('is-visible')
+            btn_submit.classList.add('is-visible')
+            submit_block.classList.add('.is-visible-flex')
+            search_cancel.classList.add('is-visible__mobile')
+            logo.classList.add('is-hidden__mobile')
+            burger.classList.add('is-hidden__mobile')
+            btn.classList.add('is-active__mobile-vertical')
+            btn.classList.add('is-active__mobile')
+        } else {
+            icon.classList.remove('is-hidden')
+            search.classList.remove('is-visible')
+            btn_submit.classList.remove('is-visible')
+            search_cancel.classList.remove('is-visible__mobile')
+            logo.classList.remove('is-hidden__mobile')
+            burger.classList.remove('is-hidden__mobile')
+            btn.classList.remove('is-active__mobile-vertical')
+            btn.classList.remove('is-active__mobile')
+            submit_block.classList.remove('.is-visible-flex')
+        }
+    });
 })
