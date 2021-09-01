@@ -41,7 +41,7 @@
                     <img src="images/header-top__logo.svg" alt="логотип компании Blanchard">
                 </a>
                 <nav class="header-top__nav">
-                    <div class="header-top__menu-cancel"></div>
+                    <button class="header-top__menu-close"></button>
                     <ul class="header-top__nav-list">
                         <li class="header-top__nav-item">
                             <a href="" class="header-top__nav-lnk header-btn">О нас</a>
@@ -80,14 +80,8 @@
                       fill="white" />
                   </svg> Войти
                 </button>
+                <button class="header-top__search-btn unvisible"></button>
                 <form action="" class="header-top__search-form">
-                    <svg class="header-top__search-btn unvisible" width="29.45" height="28.82" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="6.8678" height="1.71695"
-                          transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                          fill="white" />
-                      </svg>
                     <div class="header-top__submit-block submit-block">
                         <input type="submit" value="" class="header-top__search-submit unvisible">
                         <input type="search" name="search" id="header-top__search-input" class="header-top__search-input unvisible">
@@ -102,7 +96,9 @@
                     <li class="header-bottom__menus-element realism">
                         <button class="header-bottom__menus-btn" href="#">
                           <div class="header-bottom__menus-description menus-description">Реализм</div>
-                          <div class="menus-item-icon realism-icon"></div>
+                          <svg class="menus-item-icon realism-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
                         </button>
                         <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list realism-list">
                             <li class="menus-item__list-item">
@@ -139,8 +135,10 @@
                     </li>
                     <li class="header-bottom__menus-element impressionism">
                         <button href="#" class="header-bottom__menus-btn">
-                          <div class="header-bottom__menus-description menus-description">Импессионизм</div>
-                          <div class="menus-item-icon impressionism-icon"></div>
+                          <div class="header-bottom__menus-description menus-description">Импрессионизм</div>
+                          <svg class="menus-item-icon impressionism-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
                         </button>
                         <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list impressionism-list">
                             <li class="menus-item__list-item">
@@ -168,7 +166,9 @@
                     <li class="header-bottom__menus-element postimmpressioinism">
                         <button href="#" class="header-bottom__menus-btn">
                           <div class="header-bottom__menus-description menus-description">Постимпрессионизм</div>
-                          <div class="menus-item-icon postimmpressioinism-icon"></div>
+                          <svg class="menus-item-icon postimmpressioinism-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
                         </button>
                         <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list postimmpressioinism-list">
                             <li class="menus-item__list-item">
@@ -196,7 +196,9 @@
                     <li class="header-bottom__menus-element avangard">
                         <button href="#" class="header-bottom__menus-btn">
                           <div class="header-bottom__menus-description menus-description">Авангард</div>
-                          <div class="menus-item-icon avangard-icon"></div>
+                          <svg class="menus-item-icon avangard-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
                         </button>
                         <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list avangard-list">
                             <li class="menus-item__list-item">
@@ -224,7 +226,9 @@
                     <li class="header-bottom__menus-element futurism">
                         <button href="#" class="header-bottom__menus-btn">
                           <div class="header-bottom__menus-description menus-description">Футуризм</div>
-                          <div class="menus-item-icon futurism-icon"></div>
+                          <svg class="menus-item-icon futurism-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 1L6 6L1 1" stroke="white"/>
+                          </svg>
                         </button>
                         <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list futurism-list">
                             <li class="menus-item__list-item">
@@ -251,8 +255,8 @@
                     </li>
                 </ul>
                 <form action="" class="header-bottom__search">
-                    <input type="submit" value="" class="header-bottom__search-icon">
-                    <input type="search" name="header-bottom__search" id="header-bottom__search" placeholder="Поиск по сайту">
+                    <button class="header-bottom__search-btn"></button>
+                    <input type="search" name="header-bottom__search" class="header-bottom__search-input" placeholder="Поиск по сайту">
                 </form>
             </div>
         </div>
