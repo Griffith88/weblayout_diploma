@@ -162,10 +162,12 @@ input[type='submit'] {
 }
 
 .header-btn {
+    position: relative;
     color: white;
     font-weight: 600;
     font-size: 18px;
     transition: color .5s ease;
+    z-index: 1;
 }
 
 .header-btn:hover {
@@ -192,11 +194,30 @@ input[type='submit'] {
     color: var(--main-color);
 }
 
+.header-top__nav-lnk::before,
+.header-top__btn::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: -3px;
+    z-index: -1;
+    width: calc(100% + 12px);
+    height: calc(100% + 6px);
+    background-color: var(--active-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
 .header-top__nav-lnk:focus,
 .header-top__btn:focus {
-    padding: 0 6px;
     outline: none;
-    background-color: var(--active-color);
+    color: white;
+}
+
+.header-top__nav-lnk:focus::before,
+.header-top__btn:focus::before {
+    transform: scaleX(1);
 }
 
 .header-top__nav-item:not(:last-child) {
@@ -208,9 +229,11 @@ input[type='submit'] {
 }
 
 .header-bottom {
+    min-height: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     display: flex;
     align-items: center;
-    min-height: 70px;
 }
 
 .header-bottom__menus {
@@ -221,8 +244,10 @@ input[type='submit'] {
 }
 
 .header-bottom__menus-btn {
+    position: relative;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .header-bottom__menus-description {
@@ -235,6 +260,28 @@ input[type='submit'] {
 
 .header-bottom__menus-element {
     position: relative;
+}
+
+.header-bottom__menus-btn::before {
+    position: absolute;
+    content: '';
+    top: -8px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 16px);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease-in-out;
+    background-color: var(--active-color);
+    z-index: -1;
+}
+
+.header-bottom__menus-btn:focus::before {
+    transform: scaleX(1);
+}
+
+.header-bottom__menus-btn:focus {
+    color: white;
 }
 
 .header-bottom__menus-btn:hover .header-bottom__menus-description {
@@ -251,12 +298,6 @@ input[type='submit'] {
 
 .header-bottom__menus-btn:active .menus-item-icon>path {
     stroke: var(--active-color);
-}
-
-.header-bottom__menus-btn:focus {
-    background-color: var(--main-color);
-    padding-right: 8px;
-    padding-left: 6px;
 }
 
 .header-bottom__menus-element:not(:last-child) {
@@ -436,7 +477,6 @@ input[type='submit'] {
 }
 
 .header-bottom__search-input {
-    padding-bottom: 6px;
     padding-left: 0;
     width: 218px;
 }
