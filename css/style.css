@@ -551,7 +551,8 @@ input[type='submit'] {
 
 .hero__content {
     min-height: 800px;
-    padding-top: 240px;
+    padding-top: 243px;
+    padding-bottom: 45px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -566,7 +567,7 @@ input[type='submit'] {
 }
 
 .hero__content-detailed {
-    margin-bottom: 92px;
+    margin-bottom: 95px;
     max-width: 560px;
     font-size: 18px;
     line-height: 30px;
@@ -576,7 +577,7 @@ input[type='submit'] {
 
 .hero__content-btn {
     position: relative;
-    padding: 22.5px 35px;
+    padding: 24px 35px;
     font-size: 18px;
     font-weight: 700;
     color: white;
@@ -626,6 +627,7 @@ input[type='submit'] {
 }
 
 .about__container-detailed {
+    max-width: 1080px;
     font-size: 16px;
     font-weight: 400;
     line-height: 2em;
@@ -887,6 +889,7 @@ input[type='submit'] {
     .header-top__nav-active {
         position: absolute;
         padding: 37px 50px 50px 50px;
+        min-height: 768px;
         top: 0;
         left: 0;
         right: 0;
@@ -894,6 +897,7 @@ input[type='submit'] {
         flex-direction: column;
         align-items: flex-start;
         background-color: rgba(0, 0, 0, 0.9);
+        z-index: 2;
     }
     .header-top__nav-active>.header-top__nav-list {
         flex-direction: column;
@@ -940,6 +944,31 @@ input[type='submit'] {
         background-size: cover;
         cursor: pointer;
     }
+    /* hero adaptation */
+    .hero__banner,
+    .hero__banner-slides,
+    .hero__content {
+        min-height: 768px;
+    }
+    .hero__content {
+        padding-top: 215px;
+    }
+    .hero__content-heading {
+        margin-bottom: 10px;
+    }
+    .hero__content-detailed {
+        max-width: 661px;
+        margin-bottom: 134px;
+    }
+    .hero__banner-slide1 {
+        background-image: url('../images/hero-slide1_1024.jpg');
+    }
+    .hero__banner-slide2 {
+        background-image: url('../images/hero-slide2_1024.jpg');
+    }
+    .hero__banner-slide3 {
+        background-image: url('../images/hero-slide3_1024.jpg');
+    }
 }
 
 @media (max-width: 768px) {
@@ -971,6 +1000,73 @@ input[type='submit'] {
     .is-hidden__mobile {
         display: none;
     }
+    /* hero adaptation  */
+    .hero__banner-slide1 {
+        background-image: url('../images/hero-slide1_768.jpg');
+    }
+    .hero__banner-slide2 {
+        background-image: url('../images/hero-slide2_768.jpg');
+    }
+    .hero__banner-slide3 {
+        background-image: url('../images/hero-slide3_768.jpg');
+    }
+}
+
+@media (max-width:600px) {
+    /* header adaptation */
+    .header-top {
+        min-height: 45px;
+    }
+    /* hero adaptation  */
+    .hero__banner,
+    .hero__banner-slides,
+    .hero__content {
+        min-height: 355px;
+    }
+    .hero__content {
+        padding-top: 80px;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+    .hero__content-heading {
+        margin-bottom: 14px;
+        font-size: 32px;
+        line-height: 36.8px;
+        text-align: center;
+    }
+    .hero__content-detailed {
+        max-width: 280px;
+        margin-bottom: 38px;
+        text-align: center;
+    }
+    .hero__content-detailed,
+    .hero__content-btn {
+        font-size: 12px;
+        line-height: 16.34px;
+    }
+    .hero__content-btn {
+        padding: 14.45px 19.14px;
+    }
+    .hero__content-btn:focus::before {
+        content: '';
+        top: -7px;
+        left: -7px;
+        width: 65%;
+        height: 14%;
+        position: absolute;
+        padding: 25px 40px;
+        border: 2px solid var(--focus-color);
+        border-radius: 100px;
+    }
+    .hero__banner-slide1 {
+        background-image: url('../images/hero-slide1_320.jpg');
+    }
+    .hero__banner-slide2 {
+        background-image: url('../images/hero-slide2_320.jpg');
+    }
+    .hero__banner-slide3 {
+        background-image: url('../images/hero-slide3_320.jpg');
+    }
 }
 
 @media (max-width: 450px) {
@@ -978,9 +1074,6 @@ input[type='submit'] {
         max-width: 320px;
     }
     /* header adaptation */
-    .header-top {
-        min-height: 45px;
-    }
     .header-top__search-form {
         flex-direction: column-reverse;
         align-items: center;
@@ -1033,5 +1126,17 @@ input[type='submit'] {
     .header-top__nav-btn {
         font-size: 16px;
         padding: 9px 30px;
+    }
+    /* about adaptation  */
+    .about__container {
+        padding-top: 53px;
+        padding-bottom: 50px;
+    }
+    .about__container-heading {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    .about__container-detailed {
+        font-size: 14px;
     }
 }
