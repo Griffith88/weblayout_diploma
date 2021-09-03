@@ -540,7 +540,7 @@ input[type='submit'] {
   align-items: flex-start;
 }
 
-.hero__content-heading {
+.hero__content-text {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
@@ -929,7 +929,7 @@ input[type='submit'] {
   .hero__content {
     padding-top: 215px;
   }
-  .hero__content-heading {
+  .hero__content-text {
     margin-bottom: 10px;
   }
   .hero__content-detailed {
@@ -1002,7 +1002,7 @@ input[type='submit'] {
     padding-bottom: 15px;
     align-items: center;
   }
-  .hero__content-heading {
+  .hero__content-text {
     margin-bottom: 14px;
     font-size: 32px;
     line-height: 36.8px;
