@@ -8,3 +8,47 @@ const swiper = new Swiper('.hero__banner', {
   effect: 'fade',
   speed: 1000,
 });
+
+const element = document.querySelector(".selector-form");
+const choices = new Choices(element, {
+  searchEnabled: false,
+  position: "bottom",
+  shouldSort: false,
+});
+
+const swiper_galery = new Swiper('.galery-right__cards-form', {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 28,
+    },
+    1920: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 50,
+    },
+  }
+});

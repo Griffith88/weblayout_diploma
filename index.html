@@ -173,7 +173,8 @@
                 <path d="M11 1L6 6L1 1" stroke="white" />
               </svg>
             </button>
-            <ul data-simplebar data-simplebar-auto-hide="false" class="menus-item__list postimmpressioinism-list list-reset">
+            <ul data-simplebar data-simplebar-auto-hide="false"
+              class="menus-item__list postimmpressioinism-list list-reset">
               <li class="menus-item__list-item">
                 <a href="" class="menus-item__list-lnk postimmpressioinism1">
                   <div class="menus-item__list-detail">Ван Гог</div>
@@ -278,18 +279,18 @@
       </div>
       <div class="hero__content container">
         <p class="hero__content-text">Прикоснитесь к&nbsp;прекрасному</p>
-        <p class="hero__content-detailed">
+        <h1 class="hero__content-heading">
           Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
           предложений.
-        </p>
+        </h1>
         <button class="hero__content-btn btn-reset">Подписаться на рассылку</button>
       </div>
     </section>
 
     <section class="about">
-      <div class="about__container container">
-        <h2 class="about__container-heading">О нас</h2>
-        <p class="about__container-detailed">
+      <div class="about__container container about-content">
+        <h2 class="about-content__heading">О нас</h2>
+        <p class="about-content__detailed">
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
           участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
           Не следует, однако, забывать, что высококачественный
@@ -304,98 +305,62 @@
       </div>
     </section>
 
-    <!-- <section class="galery">
-            <div class="galery-container container">
-                <h2 class="galery-container__heading">Галерея</h2>
-                <div class="galery-container__content galery-content">
-                    <div class="galery-content__left galery-left">
-                        <label class="label-selector" for="select-form">Фильтр:</label>
-                        <select class="galery-left__selector__form selector-form" id="select-form">
-              <option value="" selected disabled data-choices-placeholder>Живопись</option>
-              <option value="Рисунок">Рисунок</option>
-              <option value="Скульптура">Скульптура</option>
-            </select>
-                        <p class="galaery-left__text">
-                            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-                            <a class="galaery-left__text-lnk" href="">авторизуйтесь</a> , либо воспользуйтесь лицензией.
-                        </p>
-                        <script>
-                            const element = document.querySelector(".selector-form")
-                            const choices = new Choices(element, {
-                                searchEnabled: false,
-                                position: "bottom",
-                                shouldSort: false,
-                            })
-                        </script>
-                    </div>
-                    <div class="galery-content_right galery-right">
-                        <div class="swiper-nav galery-nav">
-                            <button class="swiper-button-prev btn-reset swiper-button"></button>
-                            <div class="swiper-pagination"></div>
-                            <button class="swiper-button-next btn-reset swiper-button"></button>
-                        </div>
-                        <div class="swiper galery-right__cards-form">
-                            <div class="swiper-wrapper galery-cards__wrapper">
-                                <div class="swiper-slide galery-right__cards galery-right__card1"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card2"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card3"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card4"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card5"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card6"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card7"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card8"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card9"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card10"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card11"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card12"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card13"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card14"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card15"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card16"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card17"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card18"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card19"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card20"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card21"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card22"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card23"></div>
-                                <div class="swiper-slide galery-right__cards galery-right__card24"></div>
-                            </div>
-                            <script>
-                                const swiper_galery = new Swiper('.galery-right__cards-form', {
-                                    spaceBetween: 50,
-                                    pagination: {
-                                        el: ".swiper-pagination",
-                                        type: "fraction",
-                                    },
-                                    navigation: {
-                                        nextEl: ".swiper-button-next",
-                                        prevEl: ".swiper-button-prev",
-                                    },
-                                    breakpoints: {
-                                        1650: {
-                                            slidesPerView: 3,
-                                            slidesPerGroup: 3,
-                                            grid: {
-                                                rows: 2,
-                                            },
-                                        },
-                                        321: {
-                                            slidesPerView: 2,
-                                            slidesPerGroup: 2,
-                                            grid: {
-                                                rows: 2,
-                                            },
-                                        }
-                                    }
-                                });
-                            </script>
-                        </div>
-
-                    </div>
-                </div>
+    <section class="galery">
+      <div class="galery-section">
+        <div class="galery-container container">
+          <h2 class="galery-container__heading">Галерея</h2>
+          <div class="galery-container__content galery-content">
+            <div class="galery-content__left galery-left">
+              <label class="label-selector" for="select-form">Фильтр:</label>
+              <select class="galery-left__selector__form selector-form" id="select-form">
+                <option value="" selected disabled data-choices-placeholder>Живопись</option>
+                <option value="Рисунок">Рисунок</option>
+                <option value="Скульптура">Скульптура</option>
+              </select>
+              <p class="galaery-left__text">
+                Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+                <a class="galaery-left__text-lnk" href="">авторизуйтесь</a> , либо воспользуйтесь лицензией.
+              </p>
             </div>
-        </section> -->
+            <div class="galery-content_right galery-right">
+              <div class="swiper-nav galery-nav">
+                <button class="swiper-button-prev btn-reset swiper-button"></button>
+                <div class="swiper-pagination"></div>
+                <button class="swiper-button-next btn-reset swiper-button"></button>
+              </div>
+              <div class="swiper galery-right__cards-form">
+                <div class="swiper-wrapper galery-cards__wrapper">
+                  <div class="swiper-slide galery-right__cards galery-right__card1"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card2"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card3"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card4"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card5"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card6"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card7"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card8"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card9"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card10"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card11"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card12"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card13"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card14"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card15"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card16"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card17"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card18"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card19"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card20"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card21"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card22"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card23"></div>
+                  <div class="swiper-slide galery-right__cards galery-right__card24"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="js/scripts.js"></script>
 </body>
