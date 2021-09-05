@@ -697,6 +697,7 @@ input[type='submit'] {
 .galery-left .choices[data-type*=select-one].is-open:after {
   margin-top: 0;
 }
+
 .choices[data-type*=select-one][aria-expanded=false]:after {
   right: 13px;
   width: 12px;
@@ -796,6 +797,7 @@ input[type='submit'] {
   color: var(--focus-color);
   transition: color .3s ease-in-out;
 }
+
 .galaery-left__text-lnk:before {
   content: '';
   position: absolute;
@@ -833,9 +835,11 @@ input[type='submit'] {
   transition: transform .3s ease-in-out;
   z-index: -1;
 }
+
 .galaery-left__text-lnk:focus::after {
   transform: scale(1)
 }
+
 .galaery-left__text-lnk:focus {
   color: white;
 }
@@ -885,15 +889,16 @@ input[type='submit'] {
   right: 0;
   bottom: 0;
 }
-.swiper-button > svg > path {
+
+.swiper-button>svg>path {
   transition: fill .2s ease-in-out;
 }
 
-.swiper-button:hover > svg > path {
+.swiper-button:hover>svg>path {
   fill: var(--main-color);
 }
 
-.swiper-button:active > svg > path {
+.swiper-button:active>svg>path {
   fill: var(--active-color);
 }
 
@@ -909,6 +914,7 @@ input[type='submit'] {
   opacity: 0;
   transition: opacity .2s ease-in-out;
 }
+
 .swiper-button:focus::before {
   opacity: 1;
 }
@@ -933,6 +939,7 @@ input[type='submit'] {
 .galery-right__btn {
   position: relative;
 }
+
 .galery-right__btn::before {
   position: absolute;
   content: '';
@@ -941,42 +948,44 @@ input[type='submit'] {
   top: 25px;
   left: 25px;
   background-color: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .5s ease;
-}
-.galery-right__btn::after {
-  position: absolute;
-  content: '';
-  top: calc(50% - 79px / 2);
-  left: calc(50% - 81px / 2);
-  width: 81px;
-  height: 79px;
   background-image: url('../images/galery/other/magnifier.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   visibility: hidden;
   opacity: 0;
   transition: opacity .5s ease;
 }
+
 .galery-right__btn:focus {
   outline: 3px solid var(--active-color);
 }
 
-.galery-right__btn:hover::before,
-.galery-right__btn:hover::after {
+.galery-right__btn:hover::before {
   visibility: visible;
   opacity: 1;
 }
 
-.galery-right__btn:active {
+.galery-right__btn::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
-  background-size: cover;
-  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s ease;
 }
 
-.galery-right__btn:active picture > *{
+.galery-right__btn:active::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.galery-right__btn:active picture>* {
   z-index: -1;
 }
-
 
 /* ADAPTATION */
 
