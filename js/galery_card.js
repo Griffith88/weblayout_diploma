@@ -1,12 +1,15 @@
-window.addEventListener('DOMContentLoaded', function () {
-  document.addEventListener('click', function (event) {
-    const btn = this.querySelector('.galery-right__btn')
-    const popup = this.querySelector('.popup-card')
-    if (btn.contains(event.target)) {
-      popup.classList.add('is-opened-popup')
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.galery-right__btn').forEach(function(btn) {
+    btn.addEventListener('click', function (event) {
+      if (btn.contains(event.target)) {
+        document.querySelector('.popup-card').classList.add('is-opened-popup')
+      }
+    })
+  })
+  const btn_close = document.querySelector('.popup-card__close-btn')
+  btn_close.addEventListener('click', function(event) {
+    if (btn_close.contains(event.target)) {
+      document.querySelector('.popup-card').classList.remove('is-opened-popup')
     }
-    else {
-      popup.classList.remove('is-opened-popup')
-    }
-  });
-});
+  })
+})

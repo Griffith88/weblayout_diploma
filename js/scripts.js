@@ -18,11 +18,7 @@ const choices = new Choices(element, {
 
 const swiper_galery = new Swiper('.galery-right__cards-form', {
   slidesPerView: 1,
-  slidesperGroup: 1,
-  grid: {
-    rows: 1,
-  },
-  spaceBetween: 20,
+  slidesPerGroup: 1,
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
