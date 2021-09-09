@@ -46,3 +46,10 @@ const swiper_galery = new Swiper('.galery-right__cards-form', {
     },
   }
 });
+
+$(function () {
+  $("#accordion").accordion({
+    collapsible: true,
+    icons: false
+  });
+});
