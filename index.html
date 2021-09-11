@@ -23,6 +23,8 @@
   <script src="js/header-burger-menu.js"></script>
   <script src="js/choices.min.js"></script>
   <script src="js/galery_card.js"></script>
+  <script src="js/catalog_swtich-painter.js"></script>
+  <script src="js/catalog_switch-country.js"></script>
 
   <title>Blanchard</title>
 </head>
@@ -654,13 +656,15 @@
     <section class="catalog">
       <div class="container catalog-container">
         <div class="catalog-container__top-content catalog__top-content">
-          <h2 class="catalog__top-content-heading">Каталог</h2>
-          <div class="catalog__tabs-block">
-            <button class="catalog__tab-btn france btn-reset"></button>
-            <button class="catalog__tab-btn germany btn-reset"></button>
-            <button class="catalog__tab-btn italy btn-reset"></button>
-            <button class="catalog__tab-btn russia btn-reset"></button>
-            <button class="catalog__tab-btn belgium btn-reset"></button>
+          <div class="catalog-header">
+            <h2 class="catalog__top-content-heading">Каталог</h2>
+            <div class="catalog__tabs-block">
+              <button data-checked="false" class="catalog__tab-btn france btn-reset"></button>
+              <button data-checked="false" class="catalog__tab-btn germany btn-reset"></button>
+              <button data-checked="true" class="catalog__tab-btn italy btn-reset"></button>
+              <button data-checked="false" class="catalog__tab-btn russia btn-reset"></button>
+              <button data-checked="false" class="catalog__tab-btn belgium btn-reset"></button>
+            </div>
           </div>
           <p class="catalog__top-text">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
@@ -669,8 +673,8 @@
             уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
           </p>
         </div>
-        <div class="catalog-container__bottom-content">
-          <div class="catalog-container__left-content catolog__left-content">
+        <div class="catalog-container__bottom-content botom-content__italy">
+          <div class="catalog-container__left-content catolog__left-content dominico-content">
             <picture class="catalog__left-content-pic">
               <source media="(min-width: 1800px)" srcset="images/catalog/portrait01.jpg">
               <img src="images/catalog/portrait01.jpg" alt="Портрет художника">
@@ -688,6 +692,19 @@
               подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане
               Флоренции в костюмах того времени).
             </p>
+          </div>
+          <div class="catalog-container__left-content catolog__left-content empty">
+            <picture class="catalog__left-content-pic">
+              <source media="(min-width: 1800px)" srcset="images/catalog/portrait_empty.jpg">
+              <img src="images/catalog/portrait_empty.jpg" alt="Портрет художника">
+            </picture>
+            <p class="catalog__left-name">
+              Что мы о нём знаем?
+            </p>
+            <p class="catalog__left-detail">
+              Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+            </p>
+            <a href="#" class="catolog__left-lnk">В галерею</a>
           </div>
           <div class="catalog-container__right-content catolog__right-content">
             <div class="catalog__right-accordion catalog-accordion" id="accordion">
@@ -734,8 +751,6 @@
                   <li class="accordion-bottom__item">
                     <button class="accordion-bottom-btn btn-reset">Бьяджо д’Антонио Туччи</button>
                   </li>
-                </ul>
-                <ul class="accordion-bottom__list list-reset">
                   <li class="accordion-bottom__item">
                     <button class="accordion-bottom-btn btn-reset">Веккьетта</button>
                   </li>
@@ -743,7 +758,7 @@
                     <button class="accordion-bottom-btn btn-reset">Андреа Верроккьо</button>
                   </li>
                   <li class="accordion-bottom__item">
-                    <button class="accordion-bottom-btn btn-reset">Доменико Гирландайо</button>
+                    <button class="accordion-bottom-btn btn-reset dominico-btn">Доменико Гирландайо</button>
                   </li>
                   <li class="accordion-bottom__item">
                     <button class="accordion-bottom-btn btn-reset">Беноццо Гоццоли</button>
@@ -763,8 +778,6 @@
                   <li class="accordion-bottom__item">
                     <button class="accordion-bottom-btn btn-reset">Джорджоне</button>
                   </li>
-                </ul>
-                <ul class="accordion-bottom__list list-reset">
                   <li class="accordion-bottom__item">
                     <button class="accordion-bottom-btn btn-reset">Парентино, Бернардо</button>
                   </li>
@@ -784,6 +797,186 @@
                     <button class="accordion-bottom-btn btn-reset">Пинтуриккьо</button>
                   </li>
                 </ul>
+              </div>
+              <div class="catalog-accordion__element" tabindex="0">
+                <h3 class="catalog-accordion__heading">C 1500 по 1599 гг.</h3>
+                <div class="catalog-accordion__icon">
+                  <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      fill="#ECECEC" />
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      stroke="black" />
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-accordion__bottom accordion-bottom">
+                <div class="accordion-bottom__picture"></div>
+                <div class="accordion-bottom__content">
+                  <p class="accordion-bottom__content-name">Здесь пока пусто</p>
+                  <p class="accordion-bottom__content-text">А в галерее вы всегда можете найти что-то интересное для
+                    себя</p>
+                  <a href="#" class="accordion-bottom__content-lnk">В галерею</a>
+                </div>
+              </div>
+              <div class="catalog-accordion__element" tabindex="0">
+                <h3 class="catalog-accordion__heading">C 1600 по 1699 гг.</h3>
+                <div class="catalog-accordion__icon">
+                  <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      fill="#ECECEC" />
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      stroke="black" />
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-accordion__bottom accordion-bottom">
+                <div class="accordion-bottom__picture"></div>
+                <div class="accordion-bottom__content">
+                  <p class="accordion-bottom__content-name">Здесь пока пусто</p>
+                  <p class="accordion-bottom__content-text">А в галерее вы всегда можете найти что-то интересное для
+                    себя</p>
+                  <a href="#" class="accordion-bottom__content-lnk">В галерею</a>
+                </div>
+              </div>
+              <div class="catalog-accordion__element" tabindex="0">
+                <h3 class="catalog-accordion__heading">C 1700 по 1799 гг.</h3>
+                <div class="catalog-accordion__icon">
+                  <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      fill="#ECECEC" />
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      stroke="black" />
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-accordion__bottom accordion-bottom">
+                <div class="accordion-bottom__picture"></div>
+                <div class="accordion-bottom__content">
+                  <p class="accordion-bottom__content-name">Здесь пока пусто</p>
+                  <p class="accordion-bottom__content-text">А в галерее вы всегда можете найти что-то интересное для
+                    себя</p>
+                  <a href="#" class="accordion-bottom__content-lnk">В галерею</a>
+                </div>
+              </div>
+              <div class="catalog-accordion__element" tabindex="0">
+                <h3 class="catalog-accordion__heading">C 1800 по 1899 гг.</h3>
+                <div class="catalog-accordion__icon">
+                  <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      fill="#ECECEC" />
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      stroke="black" />
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-accordion__bottom accordion-bottom">
+                <div class="accordion-bottom__picture"></div>
+                <div class="accordion-bottom__content">
+                  <p class="accordion-bottom__content-name">Здесь пока пусто</p>
+                  <p class="accordion-bottom__content-text">А в галерее вы всегда можете найти что-то интересное для
+                    себя</p>
+                  <a href="#" class="accordion-bottom__content-lnk">В галерею</a>
+                </div>
+              </div>
+              <div class="catalog-accordion__element" tabindex="0">
+                <h3 class="catalog-accordion__heading">C 1900 по 1999 гг.</h3>
+                <div class="catalog-accordion__icon">
+                  <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      fill="#ECECEC" />
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      stroke="black" />
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-accordion__bottom accordion-bottom">
+                <div class="accordion-bottom__picture"></div>
+                <div class="accordion-bottom__content">
+                  <p class="accordion-bottom__content-name">Здесь пока пусто</p>
+                  <p class="accordion-bottom__content-text">А в галерее вы всегда можете найти что-то интересное для
+                    себя</p>
+                  <a href="#" class="accordion-bottom__content-lnk">В галерею</a>
+                </div>
+              </div>
+              <div class="catalog-accordion__element" tabindex="0">
+                <h3 class="catalog-accordion__heading">C 2000 г.</h3>
+                <div class="catalog-accordion__icon">
+                  <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      fill="#ECECEC" />
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      stroke="black" />
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-accordion__bottom accordion-bottom">
+                <div class="accordion-bottom__picture"></div>
+                <div class="accordion-bottom__content">
+                  <p class="accordion-bottom__content-name">Здесь пока пусто</p>
+                  <p class="accordion-bottom__content-text">А в галерее вы всегда можете найти что-то интересное для
+                    себя</p>
+                  <a href="#" class="accordion-bottom__content-lnk">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-container__bottom-content botom-content__empty">
+          <div class="catalog-container__left-content catolog__left-content empty">
+            <picture class="catalog__left-content-pic">
+              <source media="(min-width: 1800px)" srcset="images/catalog/portrait_empty.jpg">
+              <img src="images/catalog/portrait_empty.jpg" alt="Портрет художника">
+            </picture>
+            <p class="catalog__left-name">
+              Что мы о нём знаем?
+            </p>
+            <p class="catalog__left-detail">
+              Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+            </p>
+            <a href="#" class="catolog__left-lnk">В галерею</a>
+          </div>
+          <div class="catalog-container__right-content catolog__right-content">
+            <div class="catalog__right-accordion catalog-accordion" id="accordion-empty">
+              <div class="catalog-accordion__element" tabindex="0">
+                <h3 class="catalog-accordion__heading">C 1400 по 1499 гг.</h3>
+                <div class="catalog-accordion__icon">
+                  <svg width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      fill="#ECECEC" />
+                    <path
+                      d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"
+                      stroke="black" />
+                    <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog-accordion__bottom accordion-bottom">
+                <div class="accordion-bottom__picture"></div>
+                <div class="accordion-bottom__content">
+                  <p class="accordion-bottom__content-name">Здесь пока пусто</p>
+                  <p class="accordion-bottom__content-text">А в галерее вы всегда можете найти что-то интересное для
+                    себя</p>
+                  <a href="#" class="accordion-bottom__content-lnk">В галерею</a>
+                </div>
               </div>
               <div class="catalog-accordion__element" tabindex="0">
                 <h3 class="catalog-accordion__heading">C 1500 по 1599 гг.</h3>

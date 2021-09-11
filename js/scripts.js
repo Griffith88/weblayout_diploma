@@ -28,7 +28,7 @@ const swiper_galery = new Swiper('.galery-right__cards-form', {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    601: {
+    691: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       grid: {
@@ -49,6 +49,13 @@ const swiper_galery = new Swiper('.galery-right__cards-form', {
 
 $(function () {
   $("#accordion").accordion({
+    collapsible: true,
+    icons: false
+  });
+});
+
+$(function () {
+  $("#accordion-empty").accordion({
     collapsible: true,
     icons: false
   });
