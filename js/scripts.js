@@ -16,7 +16,7 @@ const choices = new Choices(element, {
   shouldSort: false,
 });
 
-const swiper_galery = new Swiper('.galery-right__cards-form', {
+const swiper_galery = new Swiper('.gallery-right__cards-form', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   pagination: {
@@ -50,13 +50,15 @@ const swiper_galery = new Swiper('.galery-right__cards-form', {
 $(function () {
   $("#accordion").accordion({
     collapsible: true,
-    icons: false
+    icons: false,
+    heightStyle: "content",
   });
 });
 
 $(function () {
   $("#accordion-empty").accordion({
     collapsible: true,
-    icons: false
+    icons: false,
+    heightStyle: "content",
   });
 });

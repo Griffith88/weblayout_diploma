@@ -7,12 +7,10 @@ window.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function(event) {
       if (btn.contains(event.target)) {
         if (btn.classList.contains('dominico-btn')) {
-          console.log('Кнопку нажали с доминико')
           dominicoContent.style.display = 'flex'
           emptyContent.style.display = 'none'
         }
         else {
-          console.log('Нажали другую кнопку')
           dominicoContent.style.display = 'none'
           emptyContent.style.display = 'flex'
         }
