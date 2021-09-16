@@ -7,11 +7,9 @@ window.addEventListener('DOMContentLoaded', function () {
       if (btn.contains(event.target)) {
         for (alterBtn of btnList) {
           if (alterBtn == btn) {
-            console.log('добавляю фокус')
             alterBtn.dataset.focused = 'true'
           }
           else {
-            console.log('убираю фокус')
             alterBtn.dataset.focused = 'false'
           }
         }

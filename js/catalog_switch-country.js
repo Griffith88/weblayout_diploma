@@ -2,6 +2,8 @@ window.addEventListener('DOMContentLoaded', function () {
   const btnList = document.querySelectorAll('.catalog__tab-btn');
   const contentBottomItaly = document.querySelector('.botom-content__italy');
   const contentBottomEmpty = document.querySelector('.botom-content__empty');
+  // const accordion = document.getElementById('accordion')
+  // const accordionEmpty = document.getElementById('accordion-empty')
   btnList.forEach(function (btn) {
     btn.addEventListener('click', function (event) {
       if (btn.contains(event.target)) {
