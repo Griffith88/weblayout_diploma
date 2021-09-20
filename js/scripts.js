@@ -47,35 +47,20 @@ const swiper_galery = new Swiper('.gallery-right__cards-form', {
   }
 });
 
-$( function() {
-  $( "#accordion" ).accordion({
-     icons: false,
-     heightStyle: "content",
-     collapsible: false,
-     active: false
-   });
+$(function () {
+  $("#accordion").accordion({
+    icons: false,
+    heightStyle: "content",
+    collapsible: true,
+    active: 0,
+  });
+});
 
-    $(".refresh").click(function() {
-      $( "#accordion" ).accordion({
-        collapsible: true,
-        active: 0
-     });
-    })
- } );
-
-
- $( function() {
-  $( "#accordion-empty" ).accordion({
-     icons: false,
-     heightStyle: "content",
-     collapsible: false,
-     active: false
-   });
-
-    $(".refresh").click(function() {
-      $( "#accordion-empty" ).accordion({
-        collapsible: true,
-        active: 0
-     });
-    })
- } );
+$(function () {
+  $("#accordion-empty").accordion({
+    icons: false,
+    heightStyle: "content",
+    collapsible: true,
+    active: 0,
+  });
+});

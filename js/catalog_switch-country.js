@@ -7,6 +7,8 @@ window.addEventListener('DOMContentLoaded', function () {
   btnList.forEach(function (btn) {
     btn.addEventListener('click', function (event) {
       if (btn.contains(event.target)) {
+        $("#accordion").accordion("option", "active", 0);
+        $("#accordion-empty").accordion("option", "active", 0);
         for (alterBtn of btnList) {
           if (alterBtn == btn) {
             alterBtn.dataset.checked = 'true'
