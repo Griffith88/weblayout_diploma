@@ -1226,7 +1226,7 @@ input[type='submit'] {
 .catolog__left-lnk {
   margin: 0;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--main-color);
 }
 
@@ -1330,6 +1330,10 @@ input[type='submit'] {
   max-height: 288px;
   max-width: 671px;
   width: 100%;
+}
+
+.ui-corner-all, .ui-corner-bottom {
+  border-radius: unset;
 }
 
 .catolog__right-content .catalog-accordion__element:first-child {
