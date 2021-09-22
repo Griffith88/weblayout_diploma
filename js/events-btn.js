@@ -8,7 +8,12 @@ window.addEventListener('DOMContentLoaded', function () {
         card.classList.add('slides-active')
         btn.style.display = 'none'
         swiper.style.marginBottom = 0
-        document.querySelector('.events-swiper__slides:nth-child(3n)').style.marginBottom = '50px'
+        if (window.screen.width >= 1024) {
+          document.querySelector('.events-swiper__slides:nth-child(3n)').style.marginBottom = '50px'
+        }
+        else {
+          document.querySelector('.events-swiper__slides:nth-child(2n)').style.marginBottom = '34px'
+        }
       })
     }
   })

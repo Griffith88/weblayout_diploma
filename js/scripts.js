@@ -1,3 +1,7 @@
+window.addEventListener('resize', function () {
+  eventSwiper();
+})
+
 const swiper = new Swiper('.hero__banner', {
   loop: true,
   freeMode: true,
@@ -64,3 +68,23 @@ $(function () {
     active: 0,
   });
 });
+
+const swiper_events = document.querySelector('.events-swiper')
+let swiperEvents;
+function eventSwiper () {
+  if (window.innerWidth <= 615 && swiper_events.dataset.mobile == 'false') {
+    swiperEvents = new Swiper(swiper_events, {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 10,
+    });
+    swiper_events.dataset.mobile = "true";
+  }
+  else if (window.innerWidth > 615) {
+    swiper_events.dataset.mobile = 'false';
+    if (swiper_events.classList.contains('swiper-initialized')) {
+      swiperEvents.destroy()
+    }
+  }
+}
+

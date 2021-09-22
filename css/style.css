@@ -1367,7 +1367,7 @@ input[type='submit'] {
   padding: 29px 129px 19px 0;
   border: unset;
   border-bottom: 1px solid var(--active-color);
-  overflow: visible;
+  overflow: auto;
 }
 
 .accordion-bottom__void-block {
@@ -1535,9 +1535,6 @@ input[type='submit'] {
   display: block;
 }
 
-.slides-active {
-  display: block;
-}
 
 .events-swiper__slides:not(:nth-child(3n)) {
   margin-right: 50px;
@@ -1841,9 +1838,26 @@ input[type='submit'] {
     padding-right: unset;
   }
   /* events adaptation */
+  .events-container {
+    padding-top: 41px;
+  }
+  .events-swiper {
+    margin-bottom: 23px;
+  }
+  .events-swiper__slides-info {
+    padding: 13px 19px 100px 35px;
+  }
+  .events-swiper__slides-text {
+    max-width: 222px;
+  }
   .events-swiper__slides {
-    max-width: 500px;
+    max-width: 290px;
+    min-height: 683px;
     width: calc((100% - 27px * 2) / 3);
+  }
+  .events-swiper__slides-details {
+    left: 34px;
+    bottom: 55px;
   }
   .events-swiper__slides:not(:nth-child(3n)) {
     margin-right: 27px;
@@ -1892,6 +1906,29 @@ input[type='submit'] {
     max-width: 100%;
     max-height: 288px;
     height: 100%;
+  }
+  /* event adaptation  */
+  .events-swiper__slides {
+    max-width: 317px;
+    width: calc(50%);
+  }
+  .events-swiper__slides:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+  .events-swiper__slides:not(:nth-child(2n)) {
+    margin-right: auto;
+  }
+  .events-swiper__slides:nth-child(3) {
+    display: none;
+  }
+  .events-swiper__slides:nth-child(-n + 2) {
+    display: block;
+  }
+  .events-swiper__slides-text {
+    max-width: 243px;
+  }
+  .events-swiper {
+    margin-bottom: 50px;
   }
 }
 
@@ -2107,6 +2144,18 @@ input[type='submit'] {
   .accordion-bottom__picture {
     max-width: 118px;
   }
+  /* events adaptation */
+  .events-swiper__slides {
+    max-width: 290px;
+    width: unset;
+  }
+  .events-swiper__slides-info {
+    padding-left: 28.58px;
+    padding-right: 26.46px;
+  }
+  .events-wraper {
+    flex-wrap: nowrap;
+  }
 }
 
 @media (max-width: 450px) {
@@ -2238,4 +2287,11 @@ input[type='submit'] {
     max-height: unset;
     columns: 1;
   }
+}
+
+
+/* OTHER */
+
+.events-swiper__slides.slides-active {
+  display: block;
 }
