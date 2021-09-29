@@ -24,7 +24,7 @@ const swiper_galery = new Swiper('.gallery-right__cards-form', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".gallery-pagination",
     type: "fraction",
   },
   navigation: {
@@ -88,3 +88,26 @@ function eventSwiper () {
   }
 }
 
+const swiper_editions = new Swiper('.editions-swiper', {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 50,
+  pagination: {
+    el: ".edition-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".editions-next",
+    prevEl: ".editions-prev",
+  },
+  breakpoints: {
+    691: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1520: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  }
+});
