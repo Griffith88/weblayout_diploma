@@ -1698,30 +1698,27 @@ input[type='submit'] {
 }
 
 .editions-heading, .range__label {
+  max-width: 277px;
   color: white;
 }
 
 .editions-heading {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .checkboxing__list {
-  margin-bottom: 43px;
+  margin-bottom: 31px;
 }
 
 .checkboxing__label, .item {
   color: white;
   font-size: 16px;
   font-weight: 400;
+  line-height: 2em;
 }
 
 .checkboxing__label {
-  margin-bottom: 11px;
   font-weight: 700;
-}
-
-.item:not(:last-child) {
-  margin-bottom: 14px;
 }
 
 .item__description {
@@ -1729,12 +1726,12 @@ input[type='submit'] {
 }
 
 .item__checkbox {
-  display: none;
+  opacity: 0;
 }
 
 .item__label {
   position: relative;
-  padding-left: 25px;
+  padding-left: 8px;
   cursor: pointer;
 }
 
@@ -1825,14 +1822,16 @@ input[type='submit'] {
 
 .editions-left {
   margin-right: auto;
+  max-width: 277px;
 }
 
 .editions-right {
   position: relative;
+  width: calc(100% - 277px - 173px);
 }
 
 .editions-swiper {
-  width: 1150px;
+  width: 100%;
 }
 
 .editions-nav {
@@ -1845,11 +1844,11 @@ input[type='submit'] {
 }
 
 .editions-slide {
-  width: calc((100% - 100px) / 3) !important;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 
 .editions-slide__content {
   display: flex;
