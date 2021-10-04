@@ -1715,6 +1715,7 @@ input[type='submit'] {
   font-size: 16px;
   font-weight: 400;
   line-height: 2em;
+  transition: color .3s ease-in-out;
 }
 
 .checkboxing__label {
@@ -1849,7 +1850,6 @@ input[type='submit'] {
   align-items: flex-start;
 }
 
-
 .editions-slide__content {
   display: flex;
   width: 100%;
@@ -1882,7 +1882,7 @@ input[type='submit'] {
   font-weight: 700;
   border: 2px solid var(--main-color);
   border-radius: 100px;
-  transition: background-color .3s ease-in-out , border-color .3s ease-in-out, border-width .3s ease-in-out;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out, border-width .3s ease-in-out;
 }
 
 .editions-slide__btn:active {
@@ -1912,8 +1912,25 @@ input[type='submit'] {
   border-color: var(--main-color);
 }
 
+.item__label:hover, .item__label:focus {
+  color: var(--focus-color);
+}
+
+.item__label:hover span, .item__label:focus span {
+  border-color: var(--focus-color);
+}
+
 /* OTHER */
 
 .events-swiper__slides.slides-active {
   display: block;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
