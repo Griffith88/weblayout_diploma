@@ -1931,7 +1931,7 @@ input[type='submit'] {
 }
 
 .projects__article {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   max-width: 1080px;
   font-size: 16px;
   line-height: 2em;
@@ -2008,6 +2008,7 @@ input[type='submit'] {
   border-bottom: 1px solid transparent;
   transition: border-color .3s ease-in-out;
 }
+
 .projects__lnk::after {
   position: absolute;
   content: "";
@@ -2031,11 +2032,95 @@ input[type='submit'] {
 .projects__lnk:hover::before {
   border-color: var(--main-color);
 }
+
 .projects__lnk:active {
   color: var(--active-color);
 }
+
 .projects__lnk:active::before {
   border-color: var(--active-color);
+}
+
+.partners-sliders {
+  display: flex;
+  align-items: center;
+}
+
+.partners-swiper {
+  width: calc(100% - 150px);
+}
+
+.partners-slide {
+  position: relative;
+  width: calc((100% - 100px) / 3) !important;
+  height: 150px;
+  outline: 1px solid #CACACA;
+  transition: outline .3s ease-in-out;
+}
+
+.partners-slide__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(100%);
+  opacity: 30%;
+  transition: opacity .3s ease-in-out, filter .3s ease-in-out;
+}
+
+.partners-slide:hover > img, .partners-slide:active > img{
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.partners-slide:active, .partners-slide:focus {
+  outline: 1px solid var(--main-color);
+}
+
+.partners-sliders .projects-btn {
+  position: relative;
+  display: block;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.projects-btn::after {
+  display: none;
+}
+
+.partners-heading {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+.projects-btn::before {
+  position: absolute;
+  content: '';
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border: 2px solid var(--main-color);
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.projects-btn:hover>svg>path, .projects-btn:active>svg>path {
+  fill: #D1A9F0;
+}
+
+.projects-btn:focus::before, .projects-btn:active::before {
+  opacity: 1;
 }
 
 /* OTHER */
