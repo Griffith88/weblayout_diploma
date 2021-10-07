@@ -114,6 +114,7 @@ const swiper_editions = new Swiper('.editions-swiper', {
 
 
 const projects_swiper = new Swiper('.partners-swiper', {
+  freeMode: false,
   spaceBetween: 50,
   slidesPerView: 3,
   slidesPerGroup: 3,
