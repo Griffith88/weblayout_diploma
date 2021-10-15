@@ -1929,6 +1929,7 @@ input[type='submit'] {
 .projects__heading {
   margin-bottom: 21px;
 }
+
 .projects-content {
   max-width: 1080px;
   margin-bottom: 24px;
@@ -2056,8 +2057,8 @@ input[type='submit'] {
 .partners-slide {
   height: 150px;
   position: relative;
-
 }
+
 .partners-lnk {
   display: block;
   height: calc(100% - 2px);
@@ -2075,7 +2076,7 @@ input[type='submit'] {
   transition: opacity .3s ease-in-out, filter .3s ease-in-out;
 }
 
-.partners-lnk:hover > img, .partners-lnk:active > img{
+.partners-lnk:hover>img, .partners-lnk:active>img {
   opacity: 1;
   filter: grayscale(0);
 }
@@ -2128,6 +2129,90 @@ input[type='submit'] {
 
 .projects-btn:focus::before, .projects-btn:active::before {
   opacity: 1;
+}
+
+/* Contatcts section */
+
+.contacts {
+  padding-top: 85px;
+}
+
+.contacts-heading {
+  margin-bottom: 24px;
+}
+
+.content_input {
+  display: block;
+  margin-bottom: 23px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 400px;
+  height: 40px;
+  border: 1px solid var(--black-color);
+  border-radius: 100px;
+}
+
+.content_input::placeholder {
+  color: #999;
+  line-height: 32px;
+}
+
+.contacts__content {
+  position: relative;
+  height: 700px;
+}
+
+.content {
+  padding: 124px 15px;
+}
+
+.content_heading {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--black-color);
+}
+
+.content-form-heading {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.content-address {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  color: var(--black-color);
+}
+
+.content-btn {
+  padding: 17px 35px;
+  border: 2px solid var(--main-color);
+  border-radius: 100px;
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.content-map {
+  position: absolute;
+  width: calc(100% - 682px);
+  height: 100%;
+  background-color: pink;
+  right: 0;
+  top: -1px;
+}
+
+.content-form {
+  margin-bottom: 45px;
+}
+
+.content-social__icon:first-child {
+  margin-right: 20px;
 }
 
 /* OTHER */
