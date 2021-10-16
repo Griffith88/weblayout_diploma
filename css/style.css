@@ -2123,7 +2123,11 @@ input[type='submit'] {
   transition: opacity .3s ease-in-out;
 }
 
-.projects-btn:hover>svg>path, .projects-btn:active>svg>path {
+.projects-btn>svg>path:nth-child(1) {
+  transition: fill .3s ease-in-out;
+}
+
+.projects-btn:hover>svg>path:nth-child(1), .projects-btn:active>svg>path:nth-child(1) {
   fill: #D1A9F0;
 }
 
@@ -2150,6 +2154,7 @@ input[type='submit'] {
   height: 40px;
   border: 1px solid var(--black-color);
   border-radius: 100px;
+  transition: background-color .3s ease-in-out;
 }
 
 .content_input::placeholder {
@@ -2190,6 +2195,7 @@ input[type='submit'] {
 }
 
 .content-btn {
+  margin: 0;
   padding: 17px 35px;
   border: 2px solid var(--main-color);
   border-radius: 100px;
@@ -2202,17 +2208,70 @@ input[type='submit'] {
   position: absolute;
   width: calc(100% - 682px);
   height: 100%;
-  background-color: pink;
   right: 0;
   top: -1px;
 }
 
 .content-form {
+  position: relative;
   margin-bottom: 45px;
+}
+
+.content-social__icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: opacity .3s ease-in-out;
 }
 
 .content-social__icon:first-child {
   margin-right: 20px;
+}
+
+.ymaps-2-1-79-map-copyrights-promo, .ymaps-2-1-79-copyright {
+  visibility: hidden;
+}
+
+.ymaps-2-1-79-ground-pane {
+  filter: grayscale(100%);
+}
+
+.content_input:hover {
+  background-color: #EAEAEA;
+}
+
+.content_input[id=name]+.js-validate-error-label {
+  top: 25px;
+}
+
+.content_input[id=tel]+.js-validate-error-label {
+  top: 87px;
+}
+
+.content-form .js-validate-error-label {
+  background-color: transparent;
+  color: #D11616 !important;
+}
+
+.content-social__icon:focus, .content-social__icon:hover {
+  opacity: .5;
+}
+
+.content-social__icon::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  transition: border-color .3s ease-in-out;
+}
+
+.content-social__icon:active:before {
+  border-color: #9643A4;
 }
 
 /* OTHER */
@@ -2228,4 +2287,36 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+
+/* Footer Section */
+
+.footer {
+  height: 140px;
+  background-color: black;
+}
+
+.footer-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo-lnk {
+  display: block  ;
+  width: 173px;
+  height: 39px;
+  background-image: url('../images/footer/footer-logo.svg');
+  background-size: cover;
+}
+
+.footer__social {
+  display: flex;
+}
+
+.footer__social-lnk:not(:last-child) {
+  display: block;
+  margin-right: 20px;
 }

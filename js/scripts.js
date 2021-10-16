@@ -71,7 +71,7 @@ $(function () {
 
 const swiper_events = document.querySelector('.events-swiper')
 let swiperEvents;
-function eventSwiper () {
+function eventSwiper() {
   if (window.innerWidth <= 615 && swiper_events.dataset.mobile == 'false') {
     swiperEvents = new Swiper(swiper_events, {
       slidesPerView: 1,
@@ -123,3 +123,20 @@ const projects_swiper = new Swiper('.partners-swiper', {
     prevEl: ".projects-prev",
   },
 });
+
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [55.75846806898367, 37.60108849999989],
+    zoom: 13,
+    controls: [],
+  });
+  var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../images/contacts/mark.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-3, -42]
+  });
+  myMap.geoObjects.add(myPlacemark);
+}
+ymaps.ready(init);
+
