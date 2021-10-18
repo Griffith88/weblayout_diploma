@@ -122,6 +122,16 @@ const projects_swiper = new Swiper('.partners-swiper', {
     nextEl: ".projects-next",
     prevEl: ".projects-prev",
   },
+  breakpoints: {
+    691: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1520: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  }
 });
 
 function init() {
