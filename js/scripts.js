@@ -142,7 +142,7 @@ function init() {
   });
   var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
     iconLayout: 'default#image',
-    iconImageHref: '../images/contacts/mark.svg',
+    iconImageHref: 'images/contacts/mark.svg',
     iconImageSize: [20, 20],
     iconImageOffset: [-3, -42]
   });
