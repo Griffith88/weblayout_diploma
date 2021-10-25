@@ -72,15 +72,19 @@ $(function () {
 const swiper_events = document.querySelector('.events-swiper')
 let swiperEvents;
 function eventSwiper() {
-  if (window.innerWidth <= 615 && swiper_events.dataset.mobile == 'false') {
+  if (window.innerWidth <= 690 && swiper_events.dataset.mobile == 'false') {
     swiperEvents = new Swiper(swiper_events, {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 10,
+      pagination: {
+        el: ".events-pagination",
+        type: 'bullets',
+      },
     });
     swiper_events.dataset.mobile = "true";
   }
-  else if (window.innerWidth > 615) {
+  else if (window.innerWidth > 690) {
     swiper_events.dataset.mobile = 'false';
     if (swiper_events.classList.contains('swiper-initialized')) {
       swiperEvents.destroy()
@@ -104,6 +108,7 @@ const swiper_editions = new Swiper('.editions-swiper', {
     691: {
       slidesPerView: 2,
       slidesPerGroup: 2,
+      spaceBetween: 34,
     },
     1520: {
       slidesPerView: 3,
@@ -123,9 +128,15 @@ const projects_swiper = new Swiper('.partners-swiper', {
     prevEl: ".projects-prev",
   },
   breakpoints: {
+    310: {
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
     691: {
       slidesPerView: 2,
       slidesPerGroup: 2,
+      spaceBetween: 34,
     },
     1520: {
       slidesPerView: 3,

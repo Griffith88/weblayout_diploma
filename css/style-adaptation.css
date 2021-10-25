@@ -193,7 +193,7 @@
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1228px) {
   /* Project Adaptation  */
   .partners-slide__img {
     max-width: 210px;
@@ -206,6 +206,9 @@
     height: 128px;
   }
   /* Contacts Section  */
+  .content {
+    padding-bottom: 103px;
+  }
   .content-map {
     width: calc(100% - 487px);
   }
@@ -217,13 +220,11 @@
     width: 60px;
     height: 60px;
   }
-
   .content-social__icon:first-child {
     margin-right: 26px;
   }
-
   /* Footer Adaptation  */
-  .footer__social-lnk, .footer__social-lnk > svg {
+  .footer__social-lnk, .footer__social-lnk>svg {
     width: 60px;
     height: 60px;
   }
@@ -294,6 +295,10 @@
   }
   .events-swiper {
     margin-bottom: 50px;
+  }
+  /* Conacts Section Adaptation */
+  .content-map {
+    width: calc(100% - 430px);
   }
 }
 
@@ -377,6 +382,23 @@
   }
   .editions-swiper {
     width: calc(100% - 54px);
+  }
+  /* editions section adaptation */
+  .editions-container {
+    padding-top: 89px;
+  }
+  .checkboxing__list {
+    margin-bottom: 33px;
+  }
+  /* projects adaptation  */
+  .projects-content {
+    max-width: 643px;
+  }
+  .partners-heading {
+    margin-bottom: 34px;
+  }
+  .partners-slide {
+    height: 106px;
   }
 }
 
@@ -545,6 +567,18 @@
   }
   .events-wraper {
     flex-wrap: nowrap;
+  }
+  .events-swiper {
+    margin-bottom: 0;
+  }
+  .events-btn {
+    display: none;
+  }
+  .events-swiper__slides {
+    display: block;
+    margin-right: unset;
+    width: 100%;
+    height: 100%;
   }
 }
 

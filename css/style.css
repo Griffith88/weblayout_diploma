@@ -2173,6 +2173,7 @@ input[type='submit'] {
 .content_heading {
   margin: 0;
   margin-bottom: 12px;
+  max-width: 400px;
   font-weight: 600;
   font-size: 24px;
   color: var(--black-color);
@@ -2181,6 +2182,7 @@ input[type='submit'] {
 .content-form-heading {
   margin: 0;
   margin-bottom: 15px;
+  max-width: 400px;
   font-size: 24px;
   font-weight: 400;
 }
@@ -2207,7 +2209,7 @@ input[type='submit'] {
 .content-map {
   position: absolute;
   width: calc(100% - 682px);
-  height: 700px;
+  height: 698px;
   right: 0;
   top: -1px;
   border-left: 1px solid #CACACA;
