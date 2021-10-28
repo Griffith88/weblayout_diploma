@@ -2,7 +2,7 @@
 
 @media (max-width: 1520px) {
   .container {
-    max-width: 955px;
+    max-width: 1200px;
   }
   /* header section */
   .header-top__section {
@@ -135,7 +135,6 @@
   }
   .gallery-right {
     width: calc(100% - 280px);
-    max-width: 594px;
   }
   .gallery-content {
     height: 594px;
@@ -194,6 +193,9 @@
 }
 
 @media (max-width: 1228px) {
+  .container {
+    max-width: 955px;
+  }
   /* Project Adaptation  */
   .partners-slide__img {
     max-width: 210px;
@@ -250,7 +252,6 @@
     margin-bottom: 110px;
   }
   .gallery-right {
-    max-width: 669px;
     width: 100%;
   }
   .gallery-bottom__text {
@@ -263,6 +264,9 @@
   /* catalog adaptation */
   .catalog-container__bottom-content {
     flex-direction: column-reverse;
+  }
+  .catolog__left-content {
+    margin-right: 0;
   }
   .catalog-container__right-content, .catalog-container__left-content {
     width: 100%;

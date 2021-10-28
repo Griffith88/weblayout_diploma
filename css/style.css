@@ -858,16 +858,15 @@ input[type='submit'] {
 
 .gallery-right {
   position: relative;
-  width: calc(100% - 400px);
-  max-width: 1150px;
+  width: calc(100% - 400px - 50px - 15px);
 }
 
 .gallery-right__cards {
-  max-height: 350px;
-  height: unset;
+  height: calc((100% - 50px) / 2);
 }
 
 .gallery-right__cards-form {
+  width: 100%;
   height: 750px;
 }
 
@@ -951,7 +950,18 @@ input[type='submit'] {
 
 .gallery-right__btn {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
+
+.gallery-right__btn > picture > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+
 
 .gallery-right__btn::before {
   position: absolute;
@@ -1847,6 +1857,16 @@ input[type='submit'] {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.editions-slide > picture {
+  max-height: 350px;
+  width: 100%;
+}
+
+.editions-slide > picture > img {
+  width: inherit;
+  max-height: inherit;
 }
 
 .editions-slide__content {
