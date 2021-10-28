@@ -1435,6 +1435,10 @@ input[type='submit'] {
   overflow: visible;
 }
 
+.accordion-bottom-btn {
+  text-align: start;
+}
+
 .accordion-bottom-btn:focus {
   color: white;
 }
@@ -1875,7 +1879,7 @@ input[type='submit'] {
   margin-bottom: 14px;
 }
 
-.editions-slide__img {
+.editions-slide > picture {
   margin-bottom: 23px;
 }
 

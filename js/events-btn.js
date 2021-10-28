@@ -9,11 +9,14 @@ window.addEventListener('DOMContentLoaded', function () {
         btn.style.display = 'none'
         swiper.style.marginBottom = 0
         if (window.screen.width >= 1024) {
-          document.querySelector('.events-swiper__slides:nth-child(3n)').style.marginBottom = '50px'
-        }
+          document.querySelectorAll('.events-swiper__slides:nth-child(-n+3)').forEach(function(elem) {
+          elem.style.marginBottom = '50px'
+        })}
         else {
-          document.querySelector('.events-swiper__slides:nth-child(2n)').style.marginBottom = '34px'
-        }
+          document.querySelectorAll('.events-swiper__slides:nth-child(-n+2)').forEach(function(elem) {
+          elem.style.marginBottom = '34px'
+          document.querySelector('.events-swiper__slides:last-child').style.marginTop = '34px'
+        })}
       })
     }
   })
