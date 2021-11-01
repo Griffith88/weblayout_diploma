@@ -1,10 +1,7 @@
 /* ADAPTATION */
 
 @media (max-width: 1520px) {
-  .container {
-    max-width: 1200px;
-  }
-  /* header section */
+/* header section */
   .header-top__section {
     position: relative;
   }
@@ -174,12 +171,11 @@
     max-width: 222px;
   }
   .events-swiper__slides {
-    max-width: 290px;
     min-height: 683px;
     width: calc((100% - 27px * 2) / 3);
   }
   .events-swiper__slides-details {
-    left: 34px;
+    left: var(--gap-sm);
     bottom: 55px;
   }
   .events-swiper__slides:not(:nth-child(3n)) {
@@ -198,9 +194,10 @@
 }
 
 @media (max-width: 1228px) {
-  .container {
-    max-width: 955px;
+  .accordion-bottom__list {
+    columns: 2;
   }
+  .catalog-accordion
   /* Editions adaptation  */
   .editions-slide > picture {
     margin-bottom: 13px;
@@ -245,9 +242,6 @@
 }
 
 @media (max-width: 1023px) {
-  .container {
-    max-width: 823px;
-  }
   /* gallery adaptation */
   .gallery-right__cards-form {
     height: 600px;
@@ -284,21 +278,19 @@
     width: 100%;
   }
   .accordion-bottom__list {
-    columns: 2;
     max-width: 100%;
     max-height: 288px;
     height: 100%;
   }
   /* event adaptation  */
   .events-swiper__slides {
-    max-width: 317px;
-    width: calc(50%);
+    width: calc((100% - var(--gap-sm)) / 2);
   }
   .events-swiper__slides:not(:nth-child(3n)) {
     margin-right: 0;
   }
   .events-swiper__slides:not(:nth-child(2n)) {
-    margin-right: auto;
+    margin-right: var(--gap-sm);
   }
   .events-swiper__slides:nth-child(3) {
     display: none;
@@ -319,9 +311,7 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    max-width: 699px;
-  }
+
   /* header adaptation */
   .header-top__search-cancel {
     width: 29px;
@@ -394,7 +384,7 @@
     width: calc(100% / 3);
   }
   .editions-right {
-    width: calc(100% - 34px);
+    width: calc(100% - var(--gap-sm));
   }
   .editions-swiper {
     width: calc(100% - 54px);
@@ -411,7 +401,7 @@
     max-width: 643px;
   }
   .partners-heading {
-    margin-bottom: 34px;
+    margin-bottom: var(--gap-sm);
   }
   .partners-slide {
     height: 106px;
@@ -598,9 +588,6 @@
 }
 
 @media (max-width: 450px) {
-  .container {
-    max-width: 320px;
-  }
   /* header adaptation */
   .header-top__search-form {
     flex-direction: column-reverse;
